@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show alert once after 1 second
     setTimeout(() => {
-        alert('Opening form...');
+        alert('Mahama Community Center...');
     }, 1000);
 });
 
