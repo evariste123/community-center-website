@@ -38,6 +38,7 @@ myform.addEventListener('submit', (e) => {
     btn1.style.borderRadius = '5px';
     btn1.style.cursor = 'pointer';
     btn1.innerText = 'Close';
+    btn1.innerHTML = 'Switch website✨';
     btn1.style.padding ='10px 10px'
 
     // 4. Update Content
@@ -58,7 +59,7 @@ myform.addEventListener('submit', (e) => {
 // 5. Close Button Logic
 btn1.addEventListener('click', () => {
     btn1.innerHTML =`
-    <div class='card'><a href='./index.html'><button>Switch Next✨</a></button>
+    <div class='card'><a href='./community.html'><button>Switch website✨</a></button>
     `;
 });
 
