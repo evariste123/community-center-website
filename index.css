@@ -2,13 +2,48 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background:linear-gradient(135deg,teal,white,wheat) ;
+    background:linear-gradient(135deg,#e9ebeb,white,wheat) ;
+}
+.animation{
+    position: relative;
+    justify-self: center;
+    background: linear-gradient(135deg,#4a4848,#073030,#69349a);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0 2px 0 hsl(271, 99%, 30%),0 2px 0 hsl(300, 13%, 24%),0 2px 0 hsl(297, 99%, 30%);
+    font-style: italic;
+    text-transform: capitalize;
+}
+.get{
+    position: relative;
+    justify-self: center;
+    margin-top: 20px;
+}
+.get button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    background-color: #2361e6;
+}
+.get button:hover{
+    background-color: #073030;
+    color: white;
+    transition: all ease 0.3s;
+    transform: translateY(-5px);
 }
 .header{
     text-align: center;
     justify-self: center;
     padding: 30px 20px;
-    background-color: whitesmoke;
+    background-image: url('./image/2.jpeg');
+    background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
 }
 .header h1{
     color:darkcyan;
@@ -21,10 +56,16 @@ body{
 .header h3{
     font: 20px bold;
     text-transform: uppercase;
-    text-shadow:0 0 5px #120122;
-    color: #073030;
+    color: #fbf9fb;
     font-weight: 900;
     text-decoration: underline;
+}
+.header p{
+    color: #fbf9fb;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: capitalize;
 }
 .container{
     position: relative;
@@ -378,4 +419,13 @@ body{
     font-weight: 500;
     font-style: italic;
     text-transform: capitalize;
+}
+.made{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+@media screen and (max-width: 768px){
+    .made{
+        grid-template-columns: 1fr;
+    }
 }

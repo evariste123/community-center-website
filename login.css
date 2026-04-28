@@ -3,27 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    animation-duration: 1s;
-    animation-name: eva;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-play-state: running;
-    animation-direction: alternate;
-    animation-range: 0% 100%;
-    animation-timeline: scroll();
-    animation-composition: replace;
 }
-@keyframes eva {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}    
+
 .header {
     background-color: #333;
     color: #fff;

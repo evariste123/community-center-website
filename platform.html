@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahama Community Center Platform</title>
+    <link rel="stylesheet" href="./platform.css">
+</head>
+<body>
+    <div class="background">Mahama Community Center Platform</div>
+    <header class="header">
+        <h3>Mahama Community Center Platform</h3>
+        <p>Access online courses, upload images, earn certificates, and customize your experience.</p>
+    </header>
+
+    <nav class="navbar">
+        <div class="log"><b>M C C</b></div>
+        <div class="nav-links">
+            <a href="community.html#home">Home</a>
+            <a href="community.html#about">About</a>
+            <a href="community.html#services">Services</a>
+            <a href="library.html">Library</a>
+            <a href="platform.html">Platform</a>
+            <a href="login.html">Login</a>
+            <a href="sign.html">Sign Up</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="overview"  class="overview">
+            <h2>Platform Overview</h2>
+            <p>The Mahama Community Center Platform is a comprehensive online hub for learning, sharing, and certification. Users can enroll in courses, upload images for projects or profiles, and earn certificates upon completion. The platform supports community collaboration, with tools for image sharing and course tracking. All features are designed to be user-friendly, accessible, and secure.</p>
+        </section>
+
+        <section id="courses" class="courses">
+            <h2>Online Courses</h2>
+            <p>Explore a wide range of online courses offered by the center and partners. Courses cover topics from technology to business, with flexible schedules and expert instructors.</p>
+            <h3>Available Courses</h3>
+            <ul>
+                <li><img src="./image/digital.jpeg" alt="Digital Literacy Course" style="float: left; margin-right: 10px;"><strong>Digital Literacy:</strong> Learn basic computer skills, internet safety, and online tools. <button class="enroll-btn" data-course="Digital Literacy">Enroll</button></li>
+                <li><img src="./image/courses.jpeg" alt="Entrepreneurship Course" style="float: left; margin-right: 10px;"><strong>Entrepreneurship:</strong> Start your business with courses on planning, marketing, and finance. <button class="enroll-btn" data-course="Entrepreneurship">Enroll</button></li>
+                <li><img src="./image/language.jpeg" alt="Language Skills Course" style="float: left; margin-right: 10px;"><strong>Language Skills:</strong> Improve English or local languages for better communication. <button class="enroll-btn" data-course="Language Skills">Enroll</button></li>
+                <li><img src="./image/techinical.jpeg" alt="Technical Training Course" style="float: left; margin-right: 10px;"><strong>Technical Training:</strong> Coding, web development, and software skills. <button class="enroll-btn" data-course="Technical Training">Enroll</button></li>
+            </ul>
+            <p>Enroll today and start learning at your own pace. Courses are free or low-cost, with options for certificates.</p>
+        </section>
+
+        <section id="certificates" class="certificates">
+            <h2>Earn Certificates</h2>
+            <p>Complete courses to earn certificates that validate your skills. Certificates are issued digitally and can be downloaded or shared.</p>
+            <h3>How to Get Certificates</h3>
+            <ol>
+                <li>Enroll in a course from the platform.</li>
+                <li>Complete all modules and assessments.</li>
+                <li>Pass the final quiz or project.</li>
+                <li>Download your certificate from the dashboard.</li>
+            </ol>
+            <p>Certificates are recognized by community partners and can help with job applications or further education.</p>
+            <h3>Sample Certificate</h3>
+            <img src="./image/sample-certificate.jpeg" alt="Sample Certificate Image" style="width: 100%; max-width: 400px; margin-bottom: 10px;">
+            <p><a href="certificates/sample-certificate.pdf" download>Download Sample Certificate</a></p>
+            <button id="generate-cert">Generate Certificate</button>
+        </section>
+
+        <section id="images" class="images">
+            <h2>Add Images</h2>
+            <img src="./image/image-gallery.jpeg" alt="Image Gallery Placeholder" style="width: 100%; max-width: 300px; margin-bottom: 10px;">
+            <p>Upload images for your profile, projects, or community sharing. Images help personalize your experience and showcase your work.</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Upload Image</legend>
+                    <div class="image">
+                    <label for="image-title">Image Title:</label><br>
+                    <input type="text" id="image-title" name="image-title" required placeholder="your title image"><br><br>
+                    <label for="image-description">Description:</label><br>
+                    <textarea id="image-description" name="image-description" rows="3" required placeholder="describe your image"></textarea><br><br>
+                    <label for="upload-image">Choose Image:</label><br>
+                    <input type="file" id="upload-image" name="upload-image" accept="image/*" required><br><br>
+                    <button type="submit">Upload Image</button>
+                    </div>
+                </fieldset>
+            </form>
+            <p>Uploaded images are stored securely and can be viewed in your profile or shared with the community.</p>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Platform Features</h2>
+            <p>The platform includes all necessary tools for a complete learning experience.</p>
+            <div class="menu">
+                <li><img src="./image/enroll.jpeg" alt="Enroll Icon" style="vertical-align: middle; margin-right: 5px;">Course enrollment and progress tracking</li><br><br>
+                <li><img src="./image/quiz.jpeg" alt="Quiz Icon" style="vertical-align: middle; margin-right: 5px;">Interactive quizzes and assignments</li><br><br>
+                <li><img src="./image/forum.jpeg" alt="Forum Icon" style="vertical-align: middle; margin-right: 5px;">Community forums for discussion</li><br><br>
+                <li><img src="./image/certificate.jpeg" alt="Certificate Icon" style="vertical-align: middle; margin-right: 5px;">Certificate generation and download</li><br><br>
+                <li><img src="./image/image.jpeg" alt="Image Icon" style="vertical-align: middle; margin-right: 5px;">Image upload and gallery</li><br><br>
+                <li><img src="./image/secure.jpeg" alt="Secure Icon" style="vertical-align: middle; margin-right: 5px;">Secure user accounts and data protection</li>
+            </div>
+        </section>
+    </main>
+
+    <section class="footer">
+        <div class="line"><hr></div>
+        <div class="car">
+        <div class="card">
+            <h3>Contact Information</h3>
+            <p>Mahama Community Center</p>
+            <p>Phone: +250 785786547</p>
+            <p>Email: bapfekureraevariste@gmail.com</p>
+            <p>Address: 123 Main Street, City, Rwanda</p>
+        </div>
+        <div class="card1">
+            <h3>Platform Policies</h3>
+            <p>All users must follow community guidelines. Courses and certificates are subject to terms of use.</p>
+        </div>
+        <div class="card2">
+            <h3>Quick Links</h3>
+            <div class="link">
+                <a href="community.html#home">Home</a>
+                <a href="community.html#about">About</a>
+                <a href="community.html#services">Services</a>
+                <a href="library.html">Library</a>
+                <a href="platform.html">Platform</a>
+            </div>
+        </div>
+        <div class="card3">
+            <h3>Settings</h3>
+            <button id="theme-toggle">Toggle Theme</button>
+            <button id="language-toggle">Switch Language</button>
+            <button id="cookie-accept">Accept Cookies</button>
+            <p id="cookie-status">Cookies not accepted yet.</p>
+        </div>
+        <div class="card4">
+            <p>&copy; 2026 Mahama Community Center Platform. All rights reserved.</p>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        let isDark = false;
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.body.style.backgroundColor = isDark ? '#333' : '#fff';
+            document.body.style.color = isDark ? '#fff' : '#000';
+            themeToggle.textContent = isDark ? 'Light Theme' : 'Dark Theme';
+        });
+
+        // Language Toggle
+        const languageToggle = document.getElementById('language-toggle');
+        let isEnglish = true;
+        languageToggle.addEventListener('click', () => {
+            isEnglish = !isEnglish;
+            // Header
+            document.querySelector('h1').textContent = isEnglish ? 'Mahama Community Center Platform' : 'Plateforme du Centre Communautaire Mahama';
+            document.querySelector('header p').textContent = isEnglish ? 'Access online courses, upload images, earn certificates, and customize your experience.' : 'Accédez aux cours en ligne, téléchargez des images, obtenez des certificats et personnalisez votre expérience.';
+            // Overview
+            document.querySelector('#overview h2').textContent = isEnglish ? 'Platform Overview' : 'Aperçu de la Plateforme';
+            document.querySelector('#overview p').textContent = isEnglish ? 'The Mahama Community Center Platform is a comprehensive online hub for learning, sharing, and certification. Users can enroll in courses, upload images for projects or profiles, and earn certificates upon completion. The platform supports community collaboration, with tools for image sharing and course tracking. All features are designed to be user-friendly, accessible, and secure.' : 'La Plateforme du Centre Communautaire Mahama est un hub en ligne complet pour l\'apprentissage, le partage et la certification. Les utilisateurs peuvent s\'inscrire à des cours, télécharger des images pour des projets ou profils, et obtenir des certificats à la fin. La plateforme soutient la collaboration communautaire, avec des outils pour le partage d\'images et le suivi des cours. Toutes les fonctionnalités sont conçues pour être conviviales, accessibles et sécurisées.';
+            // Courses
+            document.querySelector('#courses h2').textContent = isEnglish ? 'Online Courses' : 'Cours en Ligne';
+            document.querySelector('#courses p').textContent = isEnglish ? 'Explore a wide range of online courses offered by the center and partners. Courses cover topics from technology to business, with flexible schedules and expert instructors.' : 'Explorez une large gamme de cours en ligne offerts par le centre et ses partenaires. Les cours couvrent des sujets de la technologie aux affaires, avec des horaires flexibles et des instructeurs experts.';
+            document.querySelector('#courses h3').textContent = isEnglish ? 'Available Courses' : 'Cours Disponibles';
+            // Certificates
+            document.querySelector('#certificates h2').textContent = isEnglish ? 'Earn Certificates' : 'Obtenir des Certificats';
+            document.querySelector('#certificates p').textContent = isEnglish ? 'Complete courses to earn certificates that validate your skills. Certificates are issued digitally and can be downloaded or shared.' : 'Complétez les cours pour obtenir des certificats qui valident vos compétences. Les certificats sont délivrés numériquement et peuvent être téléchargés ou partagés.';
+            document.querySelector('#certificates h3').textContent = isEnglish ? 'How to Get Certificates' : 'Comment Obtenir des Certificats';
+            document.querySelector('#certificates ol').innerHTML = isEnglish ? '<li>Enroll in a course from the platform.</li><li>Complete all modules and assessments.</li><li>Pass the final quiz or project.</li><li>Download your certificate from the dashboard.</li>' : '<li>Inscrivez-vous à un cours de la plateforme.</li><li>Complétez tous les modules et évaluations.</li><li>Réussissez le quiz final ou le projet.</li><li>Téléchargez votre certificat depuis le tableau de bord.</li>';
+            document.querySelector('#certificates h3:last-of-type').textContent = isEnglish ? 'Sample Certificate' : 'Exemple de Certificat';
+            document.querySelector('#certificates a').textContent = isEnglish ? 'Download Sample Certificate' : 'Télécharger l\'Exemple de Certificat';
+            // Images
+            document.querySelector('#images h2').textContent = isEnglish ? 'Add Images' : 'Ajouter des Images';
+            document.querySelector('#images p').textContent = isEnglish ? 'Upload images for your profile, projects, or community sharing. Images help personalize your experience and showcase your work.' : 'Téléchargez des images pour votre profil, projets ou partage communautaire. Les images aident à personnaliser votre expérience et à présenter votre travail.';
+            document.querySelector('#images legend').textContent = isEnglish ? 'Upload Image' : 'Télécharger une Image';
+            document.querySelector('label[for="image-title"]').textContent = isEnglish ? 'Image Title:' : 'Titre de l\'Image:';
+            document.querySelector('label[for="image-description"]').textContent = isEnglish ? 'Description:' : 'Description:';
+            document.querySelector('label[for="upload-image"]').textContent = isEnglish ? 'Choose Image:' : 'Choisir une Image:';
+            document.querySelector('#images button[type="submit"]').textContent = isEnglish ? 'Upload Image' : 'Télécharger l\'Image';
+            document.querySelector('#images p:last-of-type').textContent = isEnglish ? 'Uploaded images are stored securely and can be viewed in your profile or shared with the community.' : 'Les images téléchargées sont stockées en toute sécurité et peuvent être vues dans votre profil ou partagées avec la communauté.';
+            // Features
+            document.querySelector('#features h2').textContent = isEnglish ? 'Platform Features' : 'Fonctionnalités de la Plateforme';
+            document.querySelector('#features p').textContent = isEnglish ? 'The platform includes all necessary tools for a complete learning experience.' : 'La plateforme comprend tous les outils nécessaires pour une expérience d\'apprentissage complète.';
+            document.querySelector('#features ul').innerHTML = isEnglish ? '<li>Course enrollment and progress tracking</li><li>Interactive quizzes and assignments</li><li>Community forums for discussion</li><li>Certificate generation and download</li><li>Image upload and gallery</li><li>Secure user accounts and data protection</li>' : '<li>Inscription aux cours et suivi des progrès</li><li>Quiz interactifs et devoirs</li><li>Forums communautaires pour les discussions</li><li>Génération et téléchargement de certificats</li><li>Téléchargement d\'images et galerie</li><li>Comptes utilisateurs sécurisés et protection des données</li>';
+            // Footer
+            document.querySelector('footer div:nth-child(1) h3').textContent = isEnglish ? 'Contact Information' : 'Informations de Contact';
+            document.querySelector('footer div:nth-child(2) h3').textContent = isEnglish ? 'Platform Policies' : 'Politiques de la Plateforme';
+            document.querySelector('footer div:nth-child(3) h3').textContent = isEnglish ? 'Quick Links' : 'Liens Rapides';
+            document.querySelector('footer div:nth-child(4) h3').textContent = isEnglish ? 'Settings' : 'Paramètres';
+            document.querySelector('#generate-cert').textContent = isEnglish ? 'Generate Certificate' : 'Générer un Certificat';
+            document.querySelectorAll('.enroll-btn').forEach(btn => {
+                btn.textContent = isEnglish ? 'Enroll' : 'S\'inscrire';
+            });
+            languageToggle.textContent = isEnglish ? 'Switch to French' : 'Passer à l\'Anglais';
+        });
+
+        // Cookie Accept
+        const cookieAccept = document.getElementById('cookie-accept');
+        const cookieStatus = document.getElementById('cookie-status');
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieStatus.textContent = 'Cookies accepted.';
+            cookieAccept.disabled = true;
+        });
+
+        // Check cookie on load
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            cookieStatus.textContent = 'Cookies accepted.';
+            cookieAccept.disabled = true;
+        }
+
+        // Image Upload
+        const uploadForm = document.querySelector('#images form');
+        uploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const file = document.getElementById('upload-image').files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.maxWidth = '200px';
+                    img.style.marginTop = '10px';
+                    document.querySelector('#images').appendChild(img);
+                    alert('Image uploaded successfully!');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Generate Certificate
+        const generateCert = document.getElementById('generate-cert');
+        generateCert.addEventListener('click', () => {
+            alert('Certificate generated! Download from your dashboard.');
+        });
+
+        // Enroll Buttons
+        const enrollBtns = document.querySelectorAll('.enroll-btn');
+        enrollBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.textContent = isEnglish ? 'Enrolled' : 'Inscrit';
+                btn.disabled = true;
+            });
+        });
+    </script>
+</body>
+</html>
