@@ -232,7 +232,7 @@ body {
     color: #fbfefe;
 }
 #certificates.certificates a{
-    color: #094848;
+    color: #f3f5f5;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 10px;
@@ -344,6 +344,10 @@ body {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+}
+#features.features li a{
+    text-decoration: none;
+    color: white;
 }
 .menu {
     background-color: #f4f4f4;

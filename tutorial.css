@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.background {
+    position: relative;
+    background-image:url('./image/5.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #0e0d0d;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    opacity: 1;
+    text-align: center;
+    z-index: -1;
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.log {
+    font-size: 10px;
+    font-weight: bold;
+    padding:5px;
+    background-color: #fff;
+    display: inline-block;
+    color: #333;
+    border-radius: 60px;
+    border: 3px solid #094848;
+    box-shadow: 0 4px 8px #f2eded33;
+}
+.header h1{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: 0 3px 0 #FFD700, 0 6px 0 #FFA500, 0 9px 0 #FF0000;
+}
+.logo a {
+    color: hsl(0, 0%, 4%);
+    text-decoration: none;
+}
+.logo a:hover {
+    color: #FFD700;
+}
+.header p {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: #fff;
+}
+.header h3 {
+    margin: 10px 0 0;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.5;
+    text-shadow: 0 3px 0 #FFD700, 0 6px 0 #FFA500, 0 9px 0 #FF0000;
+}
+.navbar {
+    background-color: #555;
+    position: relative;
+    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    justify-items: end;
+    padding: 5px 10px;
+    position: relative;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: #fff;
+    color: #555;
+}
+.log{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: help;
+    border: #ecf2f2 solid 3px;
+    }
+.log:hover {
+    background-color: #fff; 
+    color: #333;
+}
+.cv{
+    padding: 20px;
+    background-color: #ecf2f2;
+}
+.cv h2{
+    color: #ab9204;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.cv p{
+    font-size: 18px;
+    font-style: italic;
+    font: bold;
+}
+.cv h3{
+    color: #0d34f8;
+    text-decoration: underline;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.cv ol{
+    list-style:none;
+    padding: 20px;
+    border-color: #0d34f8;
+    background-color:white;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+
+.cv ul{
+    list-style:none;
+    padding: 20px;
+    border-color: #0d34f8;
+    background-color:white;
+    border: 1px solid purple;
+    border-radius: 5px;
+}
+.image{
+    padding: 20px;
+    background-color: white;
+}
+.image h2{
+    color: #ab9204;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.image p{
+    font: bold;
+    font-weight: 500;
+}
+.image h3{
+    color: #0d34f8;
+    text-decoration: underline;
+}
+.image ul{
+    list-style: none;
+    padding: 20px;
+    background-color: #ecf2f2;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+.form{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.form label{
+    font-size: 20px;
+    font-weight: 700;
+    color: #099009;
+}
+.form input{
+    padding: 10px;
+    width: 70vw;
+    cursor: pointer;
+}
+.form textarea{
+    padding: 5px;
+    width: 70vw;
+    cursor: pointer;
+}
+.form select{
+    padding: 10px;
+    width: 70vw;
+    cursor: pointer;
+}
+.form button{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background: linear-gradient(125deg,#094848,#099009,#555);
+}
+.form button:hover{
+    transition: all ease-in 0.3s;
+    background: linear-gradient(135deg,#0e0d0d,#333,#555);
+    color: white;
+    transform: translateX(-2px);
+}
+.form input:hover{
+    transition:all ease 0.3s;
+    cursor: pointer;
+    border-color: #0d34f8;
+}
+.form textarea:hover{
+     transition:all ease 0.3s;
+    cursor: pointer;
+    border-color: #0d34f8;
+}
+.form select:hover{
+     transition:all ease 0.3s;
+    cursor: pointer;
+    border-color: #0d34f8;
+}

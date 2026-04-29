@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - Mahama Community Center</title>
+    <link rel="stylesheet" href="./tutorial.css">
+</head>
+<body>
+        <div class="background">Mahama Community Center Platform</div>
+    <header class="header">
+        <h1>Learning Tutorials - Mahama Community Center</h1>
+        <p>Master skills from CV creation to becoming an IT professional.</p>
+    </header>
+
+      <nav class="navbar">
+    <div class="log"><b>M C C</b></div>
+        <div class="nav-links">
+            <a href="community.html#home">Home</a>
+            <a href="community.html#about">About</a>
+            <a href="community.html#services">Services</a>
+            <a href="library.html">Library</a>
+            <a href="platform.html">Platform</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="cv-creation" class="cv">
+            <h2>CV Creation Guide📖</h2>
+            <img src="https://via.placeholder.com/600x300?text=CV+Creation+Guide" alt="CV Creation Guide" style="width: 100%; max-width: 600px; margin-bottom: 10px;">
+            <p>Creating a professional Curriculum Vitae (CV) is the first step to getting your dream job. A CV is a detailed document that showcases your education, skills, work experience, and achievements. Follow our step-by-step guide to create an impressive CV.</p>
+
+            <h3>Steps to Create a CV</h3>
+            <ol>
+                <li><strong>Header:</strong> Start with your full name, phone number, email address, and location.</li>
+                <li><strong>Professional Summary:</strong> Write a brief overview of your career goals and what you bring to employers.</li>
+                <li><strong>Education:</strong> List your degrees, schools, graduation dates, and GPA if above 3.5.</li>
+                <li><strong>Work Experience:</strong> Detail your previous jobs, responsibilities, and achievements using action verbs.</li>
+                <li><strong>Skills:</strong> Highlight relevant technical and soft skills.</li>
+                <li><strong>Certifications:</strong> Include any professional certifications or courses completed.</li>
+                <li><strong>Languages:</strong> List languages you speak and your proficiency level.</li>
+                <li><strong>References:</strong> Provide contact information for professional references.</li>
+            </ol>
+
+            <h3>CV Best Practices</h3>
+            <ul>
+                <li>Keep it concise - one page for entry-level, two for experienced professionals.</li>
+                <li>Use clear formatting with proper spacing and bullet points.</li>
+                <li>Tailor your CV for each job application.</li>
+                <li>Use action verbs: Created, Managed, Implemented, Developed, etc.</li>
+                <li>Avoid spelling and grammar errors.</li>
+                <li>Use a professional font and consistent formatting.</li>
+            </ul>
+        </section>
+
+        <section id="cv-images" class="image">
+            <h2>Add Images to Your CV</h2>
+            <img src="https://via.placeholder.com/600x300?text=CV+with+Images" alt="CV with Images" style="width: 100%; max-width: 600px; margin-bottom: 10px;">
+            <p>Adding professional images to your CV can make it stand out. A professional profile photo humanizes your application and makes you more memorable. Learn how to add images effectively.</p>
+
+            <h3>Types of Images for CV</h3>
+            <ul>
+                <li><strong>Profile Photo:</strong> A professional headshot (3x4 cm) in formal attire.</li>
+                <li><strong>Portfolio Images:</strong> Screenshots of projects you've completed.</li>
+                <li><strong>Certification Images:</strong> Scanned copies of certificates and awards.</li>
+                <li><strong>Logos:</strong> Company logos or technology logos you've worked with.</li>
+            </ul>
+
+            <h3>Upload Profile Photo</h3>
+            <form id="photo-upload-form">
+                <fieldset>
+                    <legend>Upload Your Profile Photo</legend>
+                    <div class="form">
+                    <label for="profile-photo">Choose Photo (JPG/PNG):</label><br>
+                    <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required><br><br>
+                    <button type="submit">Upload Photo</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="photo-preview"></div>
+
+            <h3>Upload Portfolio Images</h3>
+            <form id="portfolio-upload-form">
+                <fieldset>
+                    <legend>Upload Portfolio Images</legend>
+                    <div class="form">
+                    <label for="portfolio-images">Choose Images:</label><br>
+                    <input type="file" id="portfolio-images" name="portfolio-images" accept="image/*" multiple><br><br>
+                    <button type="submit">Upload Portfolio</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="portfolio-preview"></div>
+        </section>
+
+        <section id="cv-management" class="manage">
+            <h2>Download, Upload & Change Your CV</h2>
+            <img src="https://via.placeholder.com/600x300?text=CV+Management" alt="CV Management Tools" style="width: 100%; max-width: 600px; margin-bottom: 10px;">
+
+            <h3>Download Your CV</h3>
+            <p>Once you've created your CV, download it for submission to employers or for sharing with recruiters.</p>
+            <form id="cv-download-form">
+                <fieldset>
+                    <legend>Download CV</legend>
+                    <div class="form">
+                    <label for="cv-format">Select Format:</label><br>
+                    <select id="cv-format" name="cv-format">
+                        <option value="pdf">PDF (Recommended)</option>
+                        <option value="doc">Word Document</option>
+                        <option value="txt">Text File</option>
+                    </select><br><br>
+                    <button type="button" id="download-btn">Download CV</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <h3>Upload Your CV</h3>
+            <p>Share your CV with the community or upload it to your profile.</p>
+            <form id="cv-upload-form">
+                <fieldset>
+                    <legend>Upload Your CV</legend>
+                    <div class="form">
+                    <label for="cv-file">Choose CV File:</label><br>
+                    <input type="file" id="cv-file" name="cv-file" accept=".pdf,.doc,.docx" required><br><br>
+                    <label for="cv-description">Add Description:</label><br>
+                    <textarea id="cv-description" name="cv-description" rows="3" placeholder="Describe your CV..."></textarea><br><br>
+                    <button type="submit">Upload CV</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="upload-status"></div>
+
+            <h3>Modify Your CV</h3>
+            <p>Update your CV anytime by editing sections, changing details, or improving formatting.</p>
+            <form id="cv-edit-form">
+                <fieldset>
+                    <legend>Edit Your CV</legend>
+                    <div class="form">
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your Full Name"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com"><br><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+250 xxx xxx xxx"><br><br>
+                    <label for="summary">Professional Summary:</label><br>
+                    <textarea id="summary" name="summary" rows="4" placeholder="Write your professional summary..."></textarea><br><br>
+                    <button type="submit">Save Changes</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="it-developer-path" class="path">
+            <h2>How to Become an IT/Software Developer</h2>
+            <img src="https://via.placeholder.com/600x300?text=IT+Developer+Path" alt="IT Developer Career Path" style="width: 100%; max-width: 600px; margin-bottom: 10px;">
+            <p>Becoming an IT or software developer requires dedication, continuous learning, and hands-on practice. Here's a roadmap to start your career in technology.</p>
+
+            <h3>Roadmap to IT/Software Development</h3>
+            <ol>
+                <li><strong>Foundation Skills (1-3 months):</strong>
+                    <ul>
+                        <li>Learn basics of programming (Python, JavaScript, or Java)</li>
+                        <li>Understand data structures and algorithms</li>
+                        <li>Learn version control (Git)</li>
+                    </ul>
+                </li>
+                <li><strong>Web Development (3-6 months):</strong>
+                    <ul>
+                        <li>Learn HTML, CSS, and JavaScript</li>
+                        <li>Learn frontend frameworks (React, Vue, or Angular)</li>
+                        <li>Learn backend development (Node.js, Django, or Spring)</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Topics (6-12 months):</strong>
+                    <ul>
+                        <li>Database design and management (SQL, MongoDB)</li>
+                        <li>Cloud services (AWS, Azure, or Google Cloud)</li>
+                        <li>DevOps and deployment</li>
+                    </ul>
+                </li>
+                <li><strong>Build Projects (Ongoing):</strong>
+                    <ul>
+                        <li>Create personal projects and portfolio</li>
+                        <li>Contribute to open-source projects</li>
+                        <li>Participate in hackathons</li>
+                    </ul>
+                </li>
+                <li><strong>Job Search (Ongoing):</strong>
+                    <ul>
+                        <li>Apply for internships and entry-level positions</li>
+                        <li>Network with other developers</li>
+                        <li>Prepare for technical interviews</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Essential Skills for Developers</h3>
+            <ul>
+                <li>Programming Languages: Python, JavaScript, Java, C++</li>
+                <li>Web Technologies: HTML, CSS, REST APIs</li>
+                <li>Databases: SQL, MongoDB, PostgreSQL</li>
+                <li>Problem-Solving: Algorithm design, debugging</li>
+                <li>Soft Skills: Communication, teamwork, time management</li>
+            </ul>
+
+            <h3>Certifications to Consider</h3>
+            <ul>
+                <li>CompTIA A+, Network+, Security+</li>
+                <li>Microsoft Certified: Azure Developer Associate</li>
+                <li>AWS Certified Solutions Architect</li>
+                <li>Google Cloud Certified Professional</li>
+            </ul>
+
+            <h3>Choose Your Path</h3>
+            <form id="developer-path-form">
+                <fieldset>
+                    <legend>Select Your Developer Path</legend>
+                    <div class="form">
+                    <label><input type="radio" name="path" value="frontend"> Frontend Developer (UI/UX)</label><br>
+                    <label><input type="radio" name="path" value="backend"> Backend Developer (Databases, APIs)</label><br>
+                    <label><input type="radio" name="path" value="fullstack"> Full-Stack Developer (Frontend + Backend)</label><br>
+                    <label><input type="radio" name="path" value="mobile"> Mobile Developer (iOS/Android)</label><br>
+                    <label><input type="radio" name="path" value="devops"> DevOps Engineer (Infrastructure)</label><br><br>
+                    <button type="submit">Start Learning Path</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="path-result"></div>
+        </section>
+
+        <section id="microsoft-learning" class="learn">
+            <h2>Learn Microsoft Products for Free</h2>
+            <img src="https://via.placeholder.com/600x300?text=Learn+Microsoft" alt="Microsoft Learning" style="width: 100%; max-width: 600px; margin-bottom: 10px;">
+            <p>Microsoft offers free training and resources to help you learn their products and services. From Office suite to cloud computing with Azure, explore free learning paths.</p>
+
+            <h3>Microsoft Products & Free Learning</h3>
+
+            <div class="card">
+                <h4>1. Microsoft Office Suite</h4>
+                <img src="https://via.placeholder.com/150x100?text=Office" alt="Microsoft Office" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Word, Excel, PowerPoint, Outlook</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, YouTube tutorials, LinkedIn Learning (free trial)</p>
+                <p><strong>Skills:</strong> Document creation, data analysis, presentations, email management</p>
+                <button class="learn-btn" data-product="Office">Learn Office</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card1">
+                <h4>2. Microsoft Azure</h4>
+                <img src="https://via.placeholder.com/150x100?text=Azure" alt="Microsoft Azure" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Cloud computing, databases, AI services</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, Azure free account with $200 credits</p>
+                <p><strong>Skills:</strong> Cloud deployment, virtual machines, databases, serverless computing</p>
+                <button class="learn-btn" data-product="Azure">Learn Azure</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card2">
+                <h4>3. Microsoft Teams</h4>
+                <img src="https://via.placeholder.com/150x100?text=Teams" alt="Microsoft Teams" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Collaboration, video conferencing, instant messaging</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, official Teams documentation</p>
+                <p><strong>Skills:</strong> Team collaboration, virtual meetings, document sharing</p>
+                <button class="learn-btn" data-product="Teams">Learn Teams</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card3">
+                <h4>4. Microsoft 365</h4>
+                <img src="https://via.placeholder.com/150x100?text=365" alt="Microsoft 365" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Suite of productivity apps (Office, Teams, OneDrive, etc.)</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, Microsoft 365 training center</p>
+                <p><strong>Skills:</strong> Productivity, cloud storage, collaboration, security</p>
+                <button class="learn-btn" data-product="365">Learn 365</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card4">
+                <h4>5. Microsoft SQL Server</h4>
+                <img src="https://via.placeholder.com/150x100?text=SQL" alt="Microsoft SQL Server" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Database management and analytics</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, SQL documentation, free SQL Server Express</p>
+                <p><strong>Skills:</strong> Database design, queries, data analysis, reporting</p>
+                <button class="learn-btn" data-product="SQL">Learn SQL Server</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card5">
+                <h4>6. Microsoft Power BI</h4>
+                <img src="https://via.placeholder.com/150x100?text=Power+BI" alt="Microsoft Power BI" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Business analytics and data visualization</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, Power BI free desktop version</p>
+                <p><strong>Skills:</strong> Data visualization, business intelligence, reporting</p>
+                <button class="learn-btn" data-product="Power BI">Learn Power BI</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card6">
+                <h4>7. Microsoft Windows & Active Directory</h4>
+                <img src="https://via.placeholder.com/150x100?text=Windows" alt="Windows" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Operating system and identity management</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, TechNet, free trial VMs</p>
+                <p><strong>Skills:</strong> System administration, user management, network setup</p>
+                <button class="learn-btn" data-product="Windows">Learn Windows</button>
+                <br style="clear: both;">
+            </div>
+
+            <div class="card7">
+                <h4>8. Microsoft Dynamics 365</h4>
+                <img src="https://via.placeholder.com/150x100?text=Dynamics" alt="Dynamics 365" style="float: left; margin-right: 10px; margin-bottom: 10px;">
+                <p><strong>Products:</strong> Enterprise resource planning and CRM</p>
+                <p><strong>Free Training:</strong> Microsoft Learn, free trial accounts</p>
+                <p><strong>Skills:</strong> Business process management, customer relationship, enterprise apps</p>
+                <button class="learn-btn" data-product="Dynamics">Learn Dynamics</button>
+                <br style="clear: both;">
+            </div>
+
+            <h3>Free Learning Resources</h3>
+            <ul>
+                <li><strong>Microsoft Learn:</strong> Free, official training platform with hands-on labs and certifications</li>
+                <li><strong>YouTube Channel:</strong> Official Microsoft YouTube channel with tutorials</li>
+                <li><strong>Microsoft Documentation:</strong> Detailed guides and API references</li>
+                <li><strong>Free Trials:</strong> $200 Azure credits, free Microsoft 365 trials</li>
+                <li><strong>Community Forums:</strong> Get help from community members and experts</li>
+            </ul>
+
+            <h3>Learning Paths</h3>
+            <form id="microsoft-learning-form">
+                <fieldset>
+                    <legend>Choose Your Learning Path</legend>
+                    <div class="radio">
+                    <label><input type="radio" name="microsoft-path" value="productivity"> Productivity (Office, Teams, 365)</label><br>
+                    <label><input type="radio" name="microsoft-path" value="cloud"> Cloud Computing (Azure)</label><br>
+                    <label><input type="radio" name="microsoft-path" value="data"> Data & Analytics (SQL, Power BI)</label><br>
+                    <label><input type="radio" name="microsoft-path" value="admin"> IT Administration (Windows, Active Directory)</label><br>
+                    <label><input type="radio" name="microsoft-path" value="business"> Business Applications (Dynamics 365)</label><br><br>
+                    <button type="submit">Start Learning</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="learning-result"></div>
+        </section>
+    </main>
+
+    <section class="footer">
+        <div class="line"><hr></div>
+        <div class="made">
+        <div class="btn">
+            <h3>Contact Information</h3>
+            <p>Mahama Community Center</p>
+            <p>Phone: +250 785786547</p>
+            <p>Email: bapfekureraevariste@gmail.com</p>
+            <p>Address: 123 Main Street, City, Rwanda</p>
+        </div>
+        <div class="btn1">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="community.html#home">Home</a></li>
+                <li><a href="community.html#about">About</a></li>
+                <li><a href="platform.html">Platform</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+        </div>
+        <div class="btn2">
+            <h3>Settings</h3>
+            <button id="theme-toggle">Toggle Theme</button>
+            <button id="language-toggle">Switch Language</button>
+            <button id="cookie-accept">Accept Cookies</button>
+            <p id="cookie-status">Cookies not accepted yet.</p>
+        </div>
+        <div class="btn3">
+            <p>&copy; 2026 Mahama Community Center. All rights reserved.</p>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        let isDark = false;
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            document.body.style.backgroundColor = isDark ? '#333' : '#fff';
+            document.body.style.color = isDark ? '#fff' : '#000';
+            themeToggle.textContent = isDark ? 'Light Theme' : 'Dark Theme';
+        });
+
+        // Language Toggle
+        const languageToggle = document.getElementById('language-toggle');
+        let isEnglish = true;
+        languageToggle.addEventListener('click', () => {
+            isEnglish = !isEnglish;
+            document.querySelector('h1').textContent = isEnglish ? 'Learning Tutorials - Mahama Community Center' : 'Tutoriels d\'Apprentissage - Centre Communautaire Mahama';
+            document.querySelector('header p').textContent = isEnglish ? 'Master skills from CV creation to becoming an IT professional.' : 'Maîtrisez les compétences, de la création de CV à devenir professionnel informatique.';
+            languageToggle.textContent = isEnglish ? 'Switch to French' : 'Passer à l\'Anglais';
+        });
+
+        // Cookie Accept
+        const cookieAccept = document.getElementById('cookie-accept');
+        const cookieStatus = document.getElementById('cookie-status');
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieStatus.textContent = 'Cookies accepted.';
+            cookieAccept.disabled = true;
+        });
+
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            cookieStatus.textContent = 'Cookies accepted.';
+            cookieAccept.disabled = true;
+        }
+
+        // Profile Photo Upload
+        const photoForm = document.getElementById('photo-upload-form');
+        photoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const file = document.getElementById('profile-photo').files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const preview = document.getElementById('photo-preview');
+                    preview.innerHTML = '<img src="' + e.target.result + '" style="max-width: 200px; border-radius: 50%; margin-top: 10px;" alt="Profile Photo">';
+                    alert('Profile photo uploaded successfully!');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Portfolio Upload
+        const portfolioForm = document.getElementById('portfolio-upload-form');
+        portfolioForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const files = document.getElementById('portfolio-images').files;
+            const preview = document.getElementById('portfolio-preview');
+            preview.innerHTML = '';
+            for (let file of files) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.maxWidth = '150px';
+                    img.style.margin = '5px';
+                    img.style.marginTop = '10px';
+                    preview.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+            alert('Portfolio images uploaded successfully!');
+        });
+
+        // Download CV
+        const downloadBtn = document.getElementById('download-btn');
+        downloadBtn.addEventListener('click', () => {
+            const format = document.getElementById('cv-format').value;
+            alert('Your CV has been downloaded as ' + format.toUpperCase() + '!');
+        });
+
+        // Upload CV
+        const cvUploadForm = document.getElementById('cv-upload-form');
+        cvUploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const file = document.getElementById('cv-file').files[0];
+            if (file) {
+                const uploadStatus = document.getElementById('upload-status');
+                uploadStatus.textContent = 'CV "' + file.name + '" uploaded successfully!';
+                cvUploadForm.reset();
+            }
+        });
+
+        // Edit CV
+        const cvEditForm = document.getElementById('cv-edit-form');
+        cvEditForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert('CV changes saved for ' + (name || 'user') + '!');
+        });
+
+        // Developer Path
+        const pathForm = document.getElementById('developer-path-form');
+        pathForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const path = document.querySelector('input[name="path"]:checked').value;
+            const pathNames = {
+                frontend: 'Frontend Developer Path',
+                backend: 'Backend Developer Path',
+                fullstack: 'Full-Stack Developer Path',
+                mobile: 'Mobile Developer Path',
+                devops: 'DevOps Engineer Path'
+            };
+            document.getElementById('path-result').textContent = 'You have started the ' + pathNames[path] + '!';
+        });
+
+        // Learn Microsoft Product Buttons
+        const learnBtns = document.querySelectorAll('.learn-btn');
+        learnBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const product = btn.getAttribute('data-product');
+                alert('Starting ' + product + ' learning journey! Check Microsoft Learn for courses.');
+            });
+        });
+
+        // Microsoft Learning Path
+        const microsoftLearningForm = document.getElementById('microsoft-learning-form');
+        microsoftLearningForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const path = document.querySelector('input[name="microsoft-path"]:checked').value;
+            const pathNames = {
+                productivity: 'Productivity Tools (Office, Teams, 365)',
+                cloud: 'Cloud Computing (Azure)',
+                data: 'Data & Analytics (SQL, Power BI)',
+                admin: 'IT Administration (Windows)',
+                business: 'Business Applications (Dynamics 365)'
+            };
+            document.getElementById('learning-result').textContent = 'You have enrolled in the ' + pathNames[path] + ' learning path!';
+        });
+    </script>
+</body>
+</html>
