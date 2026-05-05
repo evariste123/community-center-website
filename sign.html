@@ -96,5 +96,26 @@
             <p>&copy; 2026 Mahama Community Center. All rights reserved.</p>
         </div>
     </section>
+
+    <script>
+        const signupForm = document.querySelector('#signup form');
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            const users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+            users.push({ fname, lname, email, password });
+            localStorage.setItem('registeredUsers', JSON.stringify(users));
+            alert('Sign up successful! You can now login.');
+            signupForm.reset();
+        });
+    </script>
 </body>
 </html>

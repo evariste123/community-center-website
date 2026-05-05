@@ -5,6 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahama Community Center</title>
     <link rel="stylesheet" href="./community.css">
+    <style>
+        .dashboard {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            padding: 8px 15px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #005a9e;
+        }
+        .tab-nav {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .tab-btn {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 5px;
+            border-radius: 4px;
+        }
+        .tab-btn.active {
+            background-color: #0078d4;
+            color: white;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        .store-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            flex: 1 1 200px;
+        }
+        #cart {
+            margin-top: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tab-nav {
+                flex-direction: column;
+            }
+            .tab-btn {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            .store-items {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="logo" class="header">
@@ -88,59 +196,112 @@
         </section>
 
         <section id="dashboard" class="dashboard">
-            <h2>User Dashboard</h2>
-            <p>Welcome back! Manage your account, view registrations, and stay updated on upcoming events. This dashboard is your central hub for all activities at the Mahama Community Center. Here, you can track your participation in programs, update your personal information, and discover new opportunities. We are committed to providing you with a seamless experience, so feel free to explore the features below and reach out if you need assistance. Your engagement helps us build a stronger community.</p>
-
-            <h3>My Registrations</h3>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Program</th>
-                        <th>Date Registered</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Educational Workshop</td>
-                        <td>2026-04-15</td>
-                        <td>Confirmed</td>
-                    </tr>
-                    <tr>
-                        <td>Youth Program</td>
-                        <td>2026-04-20</td>
-                        <td>Pending</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Upcoming Events</h3>
-            <ul>
-                <li><strong>Community Seminar:</strong> Health and Wellness - May 1, 2026</li>
-                <li><strong>Adult Learning Class:</strong> Language Skills - May 5, 2026</li>
-                <li><strong>Event Hosting:</strong> Local Festival - May 10, 2026</li>
-            </ul>
-
-            <h3>Account Settings</h3>
-            <form action="#" method="post">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" value="evariste bapfekurera 'edit names'" required>
-                <br><br>
-                <label for="email">Email add:</label>
-                <input type="email" id="email" name="email" value="bapfekureraevariste@gmail.com 'edit email'" required>
-                <br><br>
-                <label for="phone">Phone te:</label>
-                <input type="number" id="phone" name="phone" value="+250 785786547" placeholder="enter phone number" required>
-                <br><br>
-                <button type="submit">Update Settings</button>
-            </form>
-
-            <h3>Quick Actions</h3>
-            <ul>
-                <li><a href="#services">Register for New Program</a></li>
-                <li><a href="mailto:bapfekureraevariste@gmail.com">Contact Support</a></li>
-                <li><a href="#home">Back to Home</a></li>
-            </ul>
+            <h2>Our Dashboard</h2>
+            <div class="search-bar">
+                <input type="text" id="dashboard-search" placeholder="Search dashboard...">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="message">Message</button>
+                <button class="tab-btn" data-tab="user">User</button>
+                <button class="tab-btn" data-tab="users">Users</button>
+                <button class="tab-btn" data-tab="store">Store</button>
+                <button class="tab-btn" data-tab="update">Update</button>
+                <button class="tab-btn" data-tab="upload">Upload</button>
+            </div>
+            <div class="tab-content">
+                <div id="message-tab" class="tab-pane active">
+                    <h3>Messages</h3>
+                    <div id="message-list">
+                        <div class="message">Welcome to the dashboard! Check out new updates.</div>
+                    </div>
+                    <form id="send-message-form">
+                        <label for="recipient">Recipient:</label>
+                        <input type="text" id="recipient" name="recipient" placeholder="Enter recipient" required>
+                        <label for="message-text">Message:</label>
+                        <textarea id="message-text" name="message-text" placeholder="Type your message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div id="user-tab" class="tab-pane">
+                    <h3>User Profile</h3>
+                    <div id="user-info">
+                        <p><strong>Name:</strong> <span id="user-name">Evariste Bapfekurera</span></p>
+                        <p><strong>Email:</strong> <span id="user-email">bapfekureraevariste@gmail.com</span></p>
+                        <p><strong>Phone:</strong> <span id="user-phone">+250 785786547</span></p>
+                        <p><strong>Role:</strong> Member</p>
+                    </div>
+                    <button id="edit-profile-btn">Edit Profile</button>
+                    <div id="edit-profile-form" style="display: none;">
+                        <form id="profile-form">
+                            <label for="edit-name">Name:</label>
+                            <input type="text" id="edit-name" name="edit-name" value="Evariste Bapfekurera">
+                            <label for="edit-email">Email:</label>
+                            <input type="email" id="edit-email" name="edit-email" value="bapfekureraevariste@gmail.com">
+                            <label for="edit-phone">Phone:</label>
+                            <input type="tel" id="edit-phone" name="edit-phone" value="+250 785786547">
+                            <button type="submit">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="store-tab" class="tab-pane">
+                    <h3>Community Store</h3>
+                    <div class="store-items">
+                        <div class="item">
+                            <h4>Educational Book</h4>
+                            <p>$10.00</p>
+                            <button class="buy-btn" data-item="Educational Book">Buy</button>
+                        </div>
+                        <div class="item">
+                            <h4>Workshop Kit</h4>
+                            <p>$25.00</p>
+                            <button class="buy-btn" data-item="Workshop Kit">Buy</button>
+                        </div>
+                        <div class="item">
+                            <h4>Membership Card</h4>
+                            <p>$5.00</p>
+                            <button class="buy-btn" data-item="Membership Card">Buy</button>
+                        </div>
+                    </div>
+                    <div id="cart">
+                        <h4>Cart</h4>
+                        <ul id="cart-list"></ul>
+                        <p>Total: $<span id="cart-total">0.00</span></p>
+                        <button id="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+                <div id="update-tab" class="tab-pane">
+                    <h3>Update Information</h3>
+                    <form id="update-form">
+                        <label for="update-name">Name:</label>
+                        <input type="text" id="update-name" name="update-name" value="Evariste Bapfekurera">
+                        <label for="update-email">Email:</label>
+                        <input type="email" id="update-email" name="update-email" value="bapfekureraevariste@gmail.com">
+                        <label for="update-phone">Phone:</label>
+                        <input type="tel" id="update-phone" name="update-phone" value="+250 785786547">
+                        <label for="update-bio">Bio:</label>
+                        <textarea id="update-bio" name="update-bio" placeholder="Update your bio"></textarea>
+                        <button type="submit">Update</button>
+                    </form>
+                    <div id="update-status"></div>
+                </div>
+                <div id="upload-tab" class="tab-pane">
+                    <h3>Upload Files</h3>
+                    <form id="upload-form">
+                        <label for="file-title">Title:</label>
+                        <input type="text" id="file-title" name="file-title" required>
+                        <label for="file-description">Description:</label>
+                        <textarea id="file-description" name="file-description" required></textarea>
+                        <label for="upload-file">Choose File:</label>
+                        <input type="file" id="upload-file" name="upload-file" required>
+                        <button type="submit">Upload</button>
+                    </form>
+                    <div id="upload-list">
+                        <h4>Uploaded Files</h4>
+                        <ul id="file-list"></ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -187,6 +348,193 @@
         </div>
         </div>
     </section>
+
+    <script>
+        // Load data from localStorage
+        let messages = JSON.parse(localStorage.getItem('messages')) || [{ text: 'Welcome to the dashboard! Check out new updates.', recipient: '' }];
+        let userProfile = JSON.parse(localStorage.getItem('userProfile')) || { name: 'Evariste Bapfekurera', email: 'bapfekureraevariste@gmail.com', phone: '+250 785786547', bio: '' };
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let total = cart.reduce((sum, item) => sum + item.price, 0);
+        let uploadedFiles = JSON.parse(localStorage.getItem('uploadedFiles')) || [];
+
+        // Initialize UI
+        function initUI() {
+            // Messages
+            const messageList = document.getElementById('message-list');
+            messageList.innerHTML = '';
+            messages.forEach(msg => {
+                const div = document.createElement('div');
+                div.className = 'message';
+                div.textContent = msg.recipient ? `To ${msg.recipient}: ${msg.text}` : msg.text;
+                messageList.appendChild(div);
+            });
+
+            // User
+            document.getElementById('user-name').textContent = userProfile.name;
+            document.getElementById('user-email').textContent = userProfile.email;
+            document.getElementById('user-phone').textContent = userProfile.phone;
+            document.getElementById('edit-name').value = userProfile.name;
+            document.getElementById('edit-email').value = userProfile.email;
+            document.getElementById('edit-phone').value = userProfile.phone;
+            document.getElementById('update-name').value = userProfile.name;
+            document.getElementById('update-email').value = userProfile.email;
+            document.getElementById('update-phone').value = userProfile.phone;
+            document.getElementById('update-bio').value = userProfile.bio;
+
+            // Cart
+            updateCart();
+
+            // Uploads
+            const fileList = document.getElementById('file-list');
+            fileList.innerHTML = '';
+            uploadedFiles.forEach(file => {
+                const li = document.createElement('li');
+                li.textContent = file;
+                fileList.appendChild(li);
+            });
+        }
+
+        // Tab Navigation
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab + '-tab').classList.add('active');
+            });
+        });
+
+        // Search
+        const searchBtn = document.getElementById('search-btn');
+        const searchInput = document.getElementById('dashboard-search');
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.toLowerCase();
+            const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
+            if (activeTab === 'message') {
+                const messageDivs = document.querySelectorAll('#message-list .message');
+                messageDivs.forEach(div => {
+                    div.style.display = div.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+                });
+            } else if (activeTab === 'user') {
+                const userInfo = document.getElementById('user-info');
+                userInfo.style.display = userInfo.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+            } else if (activeTab === 'store') {
+                const items = document.querySelectorAll('.item');
+                items.forEach(item => {
+                    item.style.display = item.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+                });
+            } else if (activeTab === 'upload') {
+                const files = document.querySelectorAll('#file-list li');
+                files.forEach(li => {
+                    li.style.display = li.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+                });
+            }
+        });
+
+        // Message Tab
+        const sendMessageForm = document.getElementById('send-message-form');
+        sendMessageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const recipient = document.getElementById('recipient').value;
+            const message = document.getElementById('message-text').value;
+            messages.push({ text: message, recipient });
+            localStorage.setItem('messages', JSON.stringify(messages));
+            initUI();
+            sendMessageForm.reset();
+            alert('Message sent!');
+        });
+
+        // User Tab
+        const editProfileBtn = document.getElementById('edit-profile-btn');
+        const editProfileForm = document.getElementById('edit-profile-form');
+        editProfileBtn.addEventListener('click', () => {
+            editProfileForm.style.display = editProfileForm.style.display === 'none' ? 'block' : 'none';
+        });
+        const profileForm = document.getElementById('profile-form');
+        profileForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            userProfile.name = document.getElementById('edit-name').value;
+            userProfile.email = document.getElementById('edit-email').value;
+            userProfile.phone = document.getElementById('edit-phone').value;
+            localStorage.setItem('userProfile', JSON.stringify(userProfile));
+            initUI();
+            editProfileForm.style.display = 'none';
+            alert('Profile updated!');
+        });
+
+        // Store Tab
+        const buyBtns = document.querySelectorAll('.buy-btn');
+        const cartList = document.getElementById('cart-list');
+        const cartTotal = document.getElementById('cart-total');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        buyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.dataset.item;
+                const price = item === 'Educational Book' ? 10 : item === 'Workshop Kit' ? 25 : 5;
+                cart.push({ item, price });
+                total += price;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCart();
+            });
+        });
+        function updateCart() {
+            cartList.innerHTML = '';
+            cart.forEach((c, i) => {
+                const li = document.createElement('li');
+                li.textContent = `${c.item} - $${c.price}`;
+                cartList.appendChild(li);
+            });
+            cartTotal.textContent = total.toFixed(2);
+        }
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length > 0) {
+                alert(`Checkout successful! Total: $${total.toFixed(2)}`);
+                cart = [];
+                total = 0;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCart();
+            } else {
+                alert('Cart is empty!');
+            }
+        });
+
+        // Update Tab
+        const updateForm = document.getElementById('update-form');
+        updateForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            userProfile.name = document.getElementById('update-name').value;
+            userProfile.email = document.getElementById('update-email').value;
+            userProfile.phone = document.getElementById('update-phone').value;
+            userProfile.bio = document.getElementById('update-bio').value;
+            localStorage.setItem('userProfile', JSON.stringify(userProfile));
+            initUI();
+            const updateStatus = document.getElementById('update-status');
+            updateStatus.textContent = 'Information updated successfully!';
+            setTimeout(() => updateStatus.textContent = '', 3000);
+        });
+
+        // Upload Tab
+        const uploadForm = document.getElementById('upload-form');
+        uploadForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const title = document.getElementById('file-title').value;
+            const description = document.getElementById('file-description').value;
+            const file = document.getElementById('upload-file').files[0];
+            if (file) {
+                const fileEntry = `${title}: ${description} (${file.name})`;
+                uploadedFiles.push(fileEntry);
+                localStorage.setItem('uploadedFiles', JSON.stringify(uploadedFiles));
+                initUI();
+                uploadForm.reset();
+                alert('File uploaded!');
+            }
+        });
+
+        // Initialize on load
+        initUI();
+    </script>
 </body>
 </html>
     </footer>

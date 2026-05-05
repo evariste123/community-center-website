@@ -5,6 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Mahama Community Center</title>
     <link rel="stylesheet" href="./login.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        .modal-content button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .modal-content button:hover {
+            background-color: #005a9e;
+        }
+    </style>
 </head>
 <body>
      <header id="logo" class="header">
@@ -30,7 +82,7 @@
         <section id="login" class="login">
             <h2>👤Login</h2>
             <p>Access your account to manage registrations, view schedules, and participate in our programs.</p>
-            <form action="#" method="post">
+            <form id="login-form" method="post">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="enter UserName" required>
                 <br><br>
@@ -38,10 +90,28 @@
                 <input type="password" id="login-password" name="password" placeholder="enter Password" required>
                 <br><br>
                 <button type="submit">Login</button>
-
             </form>
+            <p style="margin-top: 15px; text-align: center;">
+                <a href="#" id="forgot-password-link" style="color: #0078d4; text-decoration: none; cursor: pointer;">Forgot Password?</a>
+            </p>
             <p>If you don't have an account yet, you can sign up by visiting our <a href="sign.html">signup page</a> to create your account and start participating in our programs.</p>
         </section>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgot-password-modal" class="modal" style="display: none;">
+            <div class="modal-content" style="max-width: 400px;">
+                <span class="close" id="forgot-password-close">&times;</span>
+                <h2>Forgot Password?</h2>
+                <p>Enter your email address and we'll send you a password reset link.</p>
+                <form id="forgot-password-form">
+                    <label for="reset-email">Email Address:</label>
+                    <input type="email" id="reset-email" name="reset-email" placeholder="Enter your email" required><br><br>
+                    <button type="submit">Send Reset Link</button>
+                </form>
+                <div id="reset-message" style="margin-top: 15px; color: green; display: none;">Password reset link sent to your email!</div>
+                <div id="reset-error" style="margin-top: 15px; color: red; display: none;">Email not found in our system.</div>
+            </div>
+        </div>
     </main>
 
     <section class="footer">
@@ -88,5 +158,66 @@
         </div>
         </div>
     </section>
+
+    <script>
+        // Forgot Password
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+        const forgotPasswordModal = document.getElementById('forgot-password-modal');
+        const forgotPasswordClose = document.getElementById('forgot-password-close');
+        const forgotPasswordForm = document.getElementById('forgot-password-form');
+        const resetMessage = document.getElementById('reset-message');
+        const resetError = document.getElementById('reset-error');
+
+        forgotPasswordLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            forgotPasswordModal.style.display = 'block';
+            resetMessage.style.display = 'none';
+            resetError.style.display = 'none';
+        });
+
+        forgotPasswordClose.addEventListener('click', () => {
+            forgotPasswordModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === forgotPasswordModal) {
+                forgotPasswordModal.style.display = 'none';
+            }
+        });
+
+        forgotPasswordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('reset-email').value;
+            
+            // Check if email exists in registered users
+            let registeredEmails = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+            let emailExists = registeredEmails.some(user => user.email === email);
+            
+            resetMessage.style.display = 'none';
+            resetError.style.display = 'none';
+
+            if (emailExists || email === 'bapfekureraevariste@gmail.com') {
+                // Store reset token in localStorage
+                const resetToken = Math.random().toString(36).substr(2, 9);
+                const resetData = {
+                    email: email,
+                    token: resetToken,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem('passwordReset_' + resetToken, JSON.stringify(resetData));
+                
+                resetMessage.style.display = 'block';
+                resetMessage.textContent = `Password reset link sent to ${email}. (Token: ${resetToken})`;
+                forgotPasswordForm.reset();
+                
+                setTimeout(() => {
+                    forgotPasswordModal.style.display = 'none';
+                }, 3000);
+            } else {
+                resetError.style.display = 'block';
+                resetError.textContent = 'Email not found in our system.';
+            }
+        });
+    </script>
 </body>
 </html>

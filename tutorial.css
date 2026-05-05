@@ -305,28 +305,77 @@ body {
 }
 
 .card0 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: space-between;
+    padding: auto;
+     top: auto;
 }
-@media (max-width: 600px) {
-    .card0 {
-        grid-template-columns: 1fr;
-        justify-self: center;
-    }
-}
+
 @media(max-width:600px){
-    .card0{
-        width: 90vw;
-        background-color: #1bbdf7;
-    }
     .card{
-        max-width: max-content;
-        justify-self: center;
         position: relative;
-        height: auto;
+        justify-self: center;
         width: 80vw;
+        height: 30vh;
+        margin-left: 0px;
+        overflow-wrap: break-word;
+    }
+    .card1{
+        position: relative;
+        justify-self: center;
+        width: 80vw;
+        height: 30vh;
+        top: 10px;
+        overflow-wrap: break-word;
+    }
+    .card2{
+        position: relative;
+        justify-self: center;
+        overflow-wrap: break-word;
+        width: 80vw;
+        height: 30vh;
+        margin-right: 0px;
+    }
+    .card3{
+        position: relative;
+        justify-self: center;
+        overflow-wrap: break-word;
+        width: 80vw;
+        height: 30vh;
+        margin-right: 0px;
+    }
+    .card4{
+        position: relative;
+        justify-self: center;
+        overflow-wrap: break-word;
+        width: 80vw;
+        height: 30vh;
+        margin-right: 0px;
+    }
+    .card5{
+        position: relative;
+        justify-self: center;
+        overflow-wrap: break-word;
+        width: 80vw;
+        height: 30vh;
+        margin-right: 0px;
+    }
+    .card6{
+        position: relative;
+        justify-self: center;
+        overflow-wrap: break-word;
+        width: 80vw;
+        height: 30vh;
+        margin-right: 0px;
+    }
+    .card7{
+        position: relative;
+        justify-self: center;
+        overflow-wrap: break-word;
+        width: 120vw;
+        height: 30vh;
+        margin-right: 0px;
     }
 }
 .card{
@@ -686,6 +735,8 @@ body {
 .footer{
     padding: 20px;
     background: linear-gradient(136deg,#0a0a0a,#0e0d0d,#333);
+    border-radius: 0px;
+    top: auto;
 }
 
 .line {
