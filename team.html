@@ -10,33 +10,1019 @@
     
      <header id="logo" class="header">
         <pre class="logo">
-            <a href="./index.html"><H1>M C C</H1></a>
+            <a href="./index.html"><H1 data-i18n="header-title">M C C</H1></a>
         </pre>
-        <p>🤝Mahama Community Center✨</p>
+        <p data-i18n="header-subtitle">🤝Mahama Community Center✨</p>
     </header>
 
     <nav class="navbar">
-                <div class="log"><b>M C C</b></div>
-        <div class="nav-links">
-            <input type="text" name="search" id="search" placeholder="search..."><button class="search" id="button">🔍</button>
+        <div class="log"><b>M C C</b></div>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <div class="nav-links" id="nav-links">
+            <a href="#" data-i18n="nav-contact">Contact</a>
+            <input type="text" name="search" id="search" placeholder="search..." data-i18n-placeholder="search-placeholder">
+            <button type="button" class="search" id="button" data-i18n="search-btn">🔍</button>
+
+            <!-- Theme and Language Controls -->
+            <div class="theme-language-controls">
+                <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+                    🌙
+                </button>
+                <select id="language-select" class="control-btn">
+                    <option value="en">🇺🇸 EN</option>
+                    <option value="fr">🇫🇷 FR</option>
+                    <option value="rw">🇷🇼 KINY</option>
+                </select>
+            </div>
+
             <a href="./sign.html">signup</a>
             <a href="./login.html">login</a>
             <a href="community.html#dashboard">Dashboard</a>
         </div>
     </nav>
     <main class="main">
-        <div class="card">
-            <div class="image"><img src="" alt="profile"></div>
-            welcome to my futere
-        </div>
-        <div class="card1">
-            <div class="image"><img src="" alt="profile"></div>
-            welcome to my life
-        </div>
-        <div class="card2">
-            <div class="image"><img src="" alt="profile"></div>
-            welcome to my life goals
-        </div>
+        <section class="team-cards">
+            <article class="card">
+                <div class="image"><img src="./image/teams.jpeg" alt="MCC team"></div>
+                <h2 data-i18n="team-title">Our Team</h2>
+                <p>Welcome to our future. The Mahama Community Center team is dedicated to empowering everyone through education, support, and shared opportunity.</p>
+            </article>
+            <article class="card">
+                <div class="image"><img src="./image/1.jpeg" alt="Team collaboration"></div>
+                <h2>Our Life</h2>
+                <p>Welcome to our life. We work together to build strong community connections, nurture creativity, and promote sustainable growth.</p>
+            </article>
+            <article class="card">
+                <div class="image"><img src="./image/3.jpeg" alt="Goals and achievements"></div>
+                <h2>Our Goals</h2>
+                <p>Welcome to our life goals. We create clear paths for learning, leadership, and success so every member can thrive.</p>
+            </article>
+        </section>
+
+        <section class="section roaming" id="roaming">
+            <div class="section-content">
+                <h2 data-i18n="roaming-title">Roaming</h2>
+                <p>Our roaming programs bring education, creative workshops, and community support directly to neighborhoods across the city.</p>
+                <ul>
+                    <li>Mobile training sessions</li>
+                    <li>Community events in local spaces</li>
+                    <li>Outreach activities for families and youth</li>
+                </ul>
+            </div>
+            <div class="section-image">
+                <img src="./image/2.jpeg" alt="Roaming outreach program">
+            </div>
+        </section>
+
+        <section class="section roaming-request" id="roaming-request">
+            <div class="section-content">
+                <h2>Roaming Request Form</h2>
+                <p>Request MCC to bring roaming services to your area, event, or local gathering.</p>
+                <form id="roaming-request-form">
+                    <div class="form-grid roaming-grid">
+                        <label>
+                            Name
+                            <input type="text" name="name" placeholder="Full name" required>
+                        </label>
+                        <label>
+                            Email
+                            <input type="email" name="email" placeholder="example@mail.com" required>
+                        </label>
+                        <label>
+                            Phone
+                            <input type="tel" name="phone" placeholder="+250 78 123 4567" required>
+                        </label>
+                        <label>
+                            Location
+                            <input type="text" name="location" placeholder="Neighborhood or venue" required>
+                        </label>
+                        <label>
+                            Preferred Date
+                            <input type="date" name="date">
+                        </label>
+                        <label class="full-width">
+                            Activity Type
+                            <textarea name="activity" rows="3" placeholder="Example: digital literacy workshop" required></textarea>
+                        </label>
+                        <label class="full-width">
+                            Message
+                            <textarea name="message" rows="4" placeholder="Tell us how we can help your community"></textarea>
+                        </label>
+                    </div>
+                    <button type="submit">Send Roaming Request</button>
+                </form>
+            </div>
+            <div class="section-image">
+                <img src="./image/5.jpeg" alt="Roaming request form">
+            </div>
+        </section>
+
+        <section class="section edventure" id="edventure">
+            <div class="section-image">
+                <img src="./image/digital.jpeg" alt="Global adventures">
+            </div>
+            <div class="section-content">
+                <h2 data-i18n="adventures-title">Global Adventures</h2>
+                <p>Explore the world's most incredible adventures through our comprehensive guide to destinations, experiences, and cultural discoveries across every continent.</p>
+
+                <h3>🌍 Africa Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Serengeti Safari, Tanzania</h4>
+                    <p>Witness the Great Migration - one of nature's most spectacular events where over 1.5 million wildebeest, 250,000 zebras, and countless antelopes migrate in a clockwise pattern across the Serengeti plains. Experience game drives, hot air balloon safaris, and Maasai cultural encounters.</p>
+                    <a href="https://www.tanzaniaparks.go.tz" target="_blank">Official Tanzania Parks</a> |
+                    <a href="https://www.serengeti.org" target="_blank">Serengeti Conservation</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Kilimanjaro Climb, Tanzania</h4>
+                    <p>Summit Africa's highest peak at 5,895m (19,341 ft) through diverse ecosystems from tropical rainforest to arctic glaciers. Choose from 6 main routes including the popular Marangu and Machame routes, each offering unique challenges and scenery.</p>
+                    <a href="https://www.tanzaniaparks.go.tz/kilimanjaro" target="_blank">Kilimanjaro National Park</a> |
+                    <a href="https://www.kilimanjaropark.com" target="_blank">Climbing Information</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Victoria Falls, Zambia/Zimbabwe</h4>
+                    <p>Experience "Mosi-oa-Tunya" (The Smoke that Thunders) - the world's largest waterfall by volume, dropping 108m into the Zambezi Gorge. Activities include helicopter flights, bungee jumping, white-water rafting, and walking safaris.</p>
+                    <a href="https://www.zambiatourism.com/destinations/victoria-falls" target="_blank">Zambia Tourism</a> |
+                    <a href="https://www.zimparks.org" target="_blank">Zimbabwe Parks</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Sahara Desert, Morocco</h4>
+                    <p>Embark on multi-day camel treks through the golden sand dunes of Erg Chebbi and Erg Chigaga. Stay in traditional Berber camps, learn desert survival skills, and experience the silence of the world's largest hot desert under star-filled skies.</p>
+                    <a href="https://www.visitmorocco.com" target="_blank">Morocco Tourism</a> |
+                    <a href="https://www.saharadeserttravel.com" target="_blank">Desert Tours</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Gorilla Trekking, Rwanda/Uganda</h4>
+                    <p>Trek through bamboo forests and volcanic slopes to encounter endangered mountain gorillas in their natural habitat. Spend one magical hour observing these gentle giants as they forage, play, and interact with their families.</p>
+                    <a href="https://www.rwandatourism.com" target="_blank">Rwanda Tourism</a> |
+                    <a href="https://www.gorillafund.org" target="_blank">Gorilla Conservation</a>
+                </div>
+
+                <h3>🏔️ Asia Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Everest Base Camp, Nepal</h4>
+                    <p>Trek for 12-14 days through the Khumbu Valley to reach Everest Base Camp at 5,364m. Cross suspension bridges over raging rivers, pass through Sherpa villages, and witness stunning views of Everest, Lhotse, and Nuptse. Experience Sherpa culture and Buddhist monasteries along the trail.</p>
+                    <a href="https://www.nepalnationalparks.gov.np" target="_blank">Nepal National Parks</a> |
+                    <a href="https://www.sagarmatha-national-park.gov.np" target="_blank">Sagarmatha National Park</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Angkor Wat, Cambodia</h4>
+                    <p>Explore the world's largest religious monument, a UNESCO World Heritage site built in the 12th century. Cycle through the jungle to discover over 1,000 temples including Angkor Wat, Angkor Thom, and Ta Prohm. Learn about Khmer history and architecture.</p>
+                    <a href="https://www.visitcambodia.com" target="_blank">Cambodia Tourism</a> |
+                    <a href="https://whc.unesco.org/en/list/668" target="_blank">UNESCO Angkor</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Kyoto Temples, Japan</h4>
+                    <p>Discover over 1,600 Buddhist temples and 400 Shinto shrines in Japan's ancient capital. Visit Kinkaku-ji (Golden Pavilion), Fushimi Inari Shrine with its 10,000 torii gates, and practice meditation in Zen gardens. Experience traditional tea ceremonies and geisha culture.</p>
+                    <a href="https://www.visitkyoto.jp" target="_blank">Kyoto Tourism</a> |
+                    <a href="https://www.japan.travel" target="_blank">Japan National Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Bali Rice Terraces, Indonesia</h4>
+                    <p>Hike through UNESCO-listed rice terraces in Ubud and Jatiluwih, learning about traditional Balinese agriculture. Trek volcanic trails to Mount Batur for sunrise views, explore coffee plantations, and experience Balinese Hinduism through temple visits and ceremonies.</p>
+                    <a href="https://www.bali.com" target="_blank">Bali Tourism</a> |
+                    <a href="https://whc.unesco.org/en/list/1194" target="_blank">UNESCO Rice Terraces</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Silk Road, China</h4>
+                    <p>Follow ancient trade routes from Xi'an to Kashgar, crossing deserts, mountains, and grasslands. Visit the Terracotta Warriors, explore Dunhuang caves, and experience Uyghur culture. Modern Silk Road adventures include cycling, camel trekking, and cultural exchanges.</p>
+                    <a href="https://www.chinahighlights.com/silkroad" target="_blank">China Highlights</a> |
+                    <a href="https://www.silkroadfoundation.org" target="_blank">Silk Road Foundation</a>
+                </div>
+
+                <h3>🏔️ Europe Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Alps Hiking, Switzerland</h4>
+                    <p>Conquer Europe's highest peaks including the Matterhorn (4,478m) and Mont Blanc (4,809m). Hike through pristine valleys, stay in mountain huts, and experience Swiss alpine culture. Routes range from multi-day treks to challenging technical climbs with stunning views of glaciers and lakes.</p>
+                    <a href="https://www.myswitzerland.com" target="_blank">Switzerland Tourism</a> |
+                    <a href="https://www.alpsinsight.com" target="_blank">Alps Hiking Guide</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Scottish Highlands, UK</h4>
+                    <p>Explore misty glens, ancient castles, and lochs in the rugged Scottish landscape. Hike the West Highland Way, climb Ben Nevis (Britain's highest peak), and experience Highland culture. Visit the Isle of Skye for dramatic coastal scenery and wildlife encounters.</p>
+                    <a href="https://www.visitscotland.com" target="_blank">Visit Scotland</a> |
+                    <a href="https://www.scottishhighlands.co.uk" target="_blank">Highlands Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Patagonia Glaciers, Chile/Argentina</h4>
+                    <p>Trek through massive ice fields, hike to Perito Moreno Glacier, and explore fjords in Torres del Paine National Park. Experience Patagonian winds, guanaco herds, and stunning glaciers calving into turquoise lakes. Multi-day treks offer solitude and raw natural beauty.</p>
+                    <a href="https://www.chile.travel" target="_blank">Chile Tourism</a> |
+                    <a href="https://www.argentina.travel" target="_blank">Argentina Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Northern Lights, Norway</h4>
+                    <p>Chase the aurora borealis in Tromsø, the northernmost city in the world. Combine aurora viewing with dog sledding, snowshoeing, and Sami cultural experiences. Stay in glass igloos for optimal viewing and learn about Norse mythology and indigenous traditions.</p>
+                    <a href="https://www.visitnorway.com" target="_blank">Visit Norway</a> |
+                    <a href="https://www.northernlightscentre.ca" target="_blank">Aurora Information</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Cinque Terre, Italy</h4>
+                    <p>Hike the scenic coastal trail connecting five colorful cliffside villages: Riomaggiore, Manarola, Corniglia, Vernazza, and Monterosso. Experience Italian coastal culture, fresh seafood, and terraced vineyards. The trail offers breathtaking Mediterranean views and charming village life.</p>
+                    <a href="https://www.cinqueterre.it" target="_blank">Cinque Terre Official</a> |
+                    <a href="https://www.italia.it" target="_blank">Italy Tourism</a>
+                </div>
+
+                <h3>🌎 North America Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Grand Canyon, USA</h4>
+                    <p>Raft the mighty Colorado River through the Grand Canyon's 446km of carved rock layers, revealing 2 billion years of geological history. Choose from day trips to multi-week expeditions, hiking rim-to-rim trails, or helicopter tours for aerial perspectives of this natural wonder.</p>
+                    <a href="https://www.nps.gov/grca" target="_blank">Grand Canyon National Park</a> |
+                    <a href="https://www.grandcanyon.com" target="_blank">Grand Canyon Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Yosemite Climbing, USA</h4>
+                    <p>Scale the granite walls of Yosemite Valley, home to some of the world's most famous big wall climbs like El Capitan. Experience rock climbing, bouldering, and mountaineering in California's Sierra Nevada. The park offers routes for all skill levels with stunning alpine scenery.</p>
+                    <a href="https://www.nps.gov/yose" target="_blank">Yosemite National Park</a> |
+                    <a href="https://www.yosemite.com" target="_blank">Yosemite Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Banff National Park, Canada</h4>
+                    <p>Hike turquoise lakes and mountain trails in the Canadian Rockies. Lake Louise, Moraine Lake, and Johnston Canyon offer breathtaking scenery. Activities include hiking, wildlife viewing (grizzly bears, elk), and winter sports. Experience Canada's first national park with its diverse ecosystems.</p>
+                    <a href="https://www.pc.gc.ca/en/pn-np/ab/banff" target="_blank">Banff National Park</a> |
+                    <a href="https://www.banfflakelouise.com" target="_blank">Banff Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Yellowstone Geysers, USA</h4>
+                    <p>Explore the world's largest concentration of geothermal features including Old Faithful geyser, colorful hot springs, and mud pots. Hike through diverse landscapes from meadows to forests, spot wildlife like bison and wolves, and learn about volcanic geology in this UNESCO site.</p>
+                    <a href="https://www.nps.gov/yell" target="_blank">Yellowstone National Park</a> |
+                    <a href="https://www.yellowstonenationalpark.com" target="_blank">Yellowstone Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Alaska Glaciers</h4>
+                    <p>Kayak through fjords, witness massive glaciers calving into the sea, and explore temperate rainforests. Visit Glacier Bay National Park for wildlife viewing (whales, seals, eagles) and experience Alaska Native culture. Helicopter tours offer aerial views of Harding Icefield.</p>
+                    <a href="https://www.nps.gov/glba" target="_blank">Glacier Bay National Park</a> |
+                    <a href="https://www.travelalaska.com" target="_blank">Alaska Tourism</a>
+                </div>
+
+                <h3>🌏 South America Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Machu Picchu, Peru</h4>
+                    <p>Trek the legendary Inca Trail for 4 days through Andean cloud forests to reach the "Lost City of the Incas" at 2,430m. Explore ancient stone terraces, temples, and astronomical observatories. Experience Inca culture and Andean biodiversity in this UNESCO World Heritage site.</p>
+                    <a href="https://www.peru.travel" target="_blank">Peru Tourism</a> |
+                    <a href="https://whc.unesco.org/en/list/274" target="_blank">UNESCO Machu Picchu</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Amazon Rainforest, Brazil</h4>
+                    <p>Embark on jungle expeditions through the world's largest tropical rainforest, home to over 2.5 million insect species and 40,000 plant species. Stay in eco-lodges, spot pink river dolphins, monkeys, and colorful birds. Learn about indigenous cultures and sustainable conservation.</p>
+                    <a href="https://www.braziltour.com" target="_blank">Brazil Tourism</a> |
+                    <a href="https://www.amazonconservation.org" target="_blank">Amazon Conservation</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Torres del Paine, Chile</h4>
+                    <p>Hike through Patagonian wilderness featuring granite towers, turquoise lakes, and massive glaciers. The W Trek (5 days) or O Circuit (8-9 days) offer stunning views of the Southern Patagonian Ice Field. Experience extreme weather and diverse wildlife in this UNESCO Biosphere Reserve.</p>
+                    <a href="https://www.chile.travel" target="_blank">Chile Tourism</a> |
+                    <a href="https://www.torresdelpaine.com" target="_blank">Torres del Paine</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Galápagos Islands, Ecuador</h4>
+                    <p>Dive with unique wildlife including marine iguanas, blue-footed boobies, and giant tortoises. Snorkel with sharks, rays, and colorful fish in pristine waters. Hike volcanic craters, explore lava tunnels, and learn about Darwin's theory of evolution in this UNESCO World Heritage site.</p>
+                    <a href="https://www.galapagos.org" target="_blank">Galápagos National Park</a> |
+                    <a href="https://whc.unesco.org/en/list/1" target="_blank">UNESCO Galápagos</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Salar de Uyuni, Bolivia</h4>
+                    <p>Cross the world's largest salt flat (10,582 km²) during the rainy season when it becomes the world's largest mirror. Visit Isla Incahuasi with its giant cacti, explore colorful lagoons, and experience the unique optical illusions created by the vast white expanse.</p>
+                    <a href="https://www.bolivia.travel" target="_blank">Bolivia Tourism</a> |
+                    <a href="https://www.uyunisaltflats.com" target="_blank">Uyuni Salt Flats</a>
+                </div>
+
+                <h3>🏝️ Oceania Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Great Barrier Reef, Australia</h4>
+                    <p>Dive the world's largest coral reef system spanning 2,300km with over 3,000 individual reefs. Snorkel with colorful fish, turtles, and rays in crystal-clear waters. Experience underwater adventures from introductory dives to advanced wreck diving and shark encounters.</p>
+                    <a href="https://www.gbrmpa.gov.au" target="_blank">Great Barrier Reef Marine Park</a> |
+                    <a href="https://www.barrierreef.org" target="_blank">Reef Conservation</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>New Zealand Trails</h4>
+                    <p>Hike through Middle-earth landscapes featured in Lord of the Rings. Trek the Milford Track, climb volcanoes in Rotorua, or kayak fjords in Fiordland. Experience Maori culture, geothermal wonders, and diverse ecosystems from beaches to mountains.</p>
+                    <a href="https://www.newzealand.com" target="_blank">New Zealand Tourism</a> |
+                    <a href="https://www.doc.govt.nz" target="_blank">Department of Conservation</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Uluru, Australia</h4>
+                    <p>Experience the sacred red rock formation in Australia's Red Centre. Learn about Aboriginal Tjukurpa (creation stories) from traditional owners. Hike around the base, visit Kata Tjuta (The Olgas), and witness stunning desert sunsets. Respect cultural protocols and sacred sites.</p>
+                    <a href="https://www.parksaustralia.gov.au/uluru" target="_blank">Uluru-Kata Tjuta National Park</a> |
+                    <a href="https://www.uluruaustralia.com" target="_blank">Uluru Tourism</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Fiji Islands</h4>
+                    <p>Island hop through over 300 islands with pristine beaches, coral reefs, and volcanic peaks. Snorkel the Great Astrolabe Reef, hike to waterfalls, and experience Fijian culture through traditional ceremonies and kava drinking. Stay in beach bures and explore marine life.</p>
+                    <a href="https://www.fiji.travel" target="_blank">Fiji Tourism</a> |
+                    <a href="https://www.fijime.com" target="_blank">Fiji Marine</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Cook Islands</h4>
+                    <p>Explore 15 volcanic islands with lagoons, black sand beaches, and coral reefs. Snorkel with reef sharks, hike to viewpoints, and experience Polynesian culture. Visit Rarotonga for cultural performances and Aitutaki for its iconic lagoon with over 50 small islands.</p>
+                    <a href="https://www.cookislands.travel" target="_blank">Cook Islands Tourism</a> |
+                    <a href="https://www.cookislands.com" target="_blank">Cook Islands</a>
+                </div>
+
+                <h3>❄️ Polar Adventures</h3>
+                <div class="adventure-item">
+                    <h4>Antarctica Expedition</h4>
+                    <p>Cruise through massive icebergs, visit penguin colonies, and explore the frozen continent. Experience 24-hour daylight in summer, witness calving glaciers, and learn about climate research. Activities include kayaking, camping on ice, and wildlife photography with seals, whales, and albatross.</p>
+                    <a href="https://www.antarctica.gov.au" target="_blank">Australian Antarctic Program</a> |
+                    <a href="https://www.iaato.org" target="_blank">IAATO (Tour Operators)</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Arctic Norway</h4>
+                    <p>Experience the midnight sun, dog sledding across frozen landscapes, and Sami reindeer herding. Visit Tromsø for northern lights viewing and Svalbard for polar bear watching. Learn about Arctic survival, indigenous cultures, and climate change impacts in the High North.</p>
+                    <a href="https://www.visitnorway.com" target="_blank">Visit Norway</a> |
+                    <a href="https://www.sysselmannen.no" target="_blank">Svalbard Government</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Greenland Ice Sheet</h4>
+                    <p>Hike across the second-largest ice sheet in the world, experiencing extreme cold and vast white expanses. Visit Inuit communities, learn about Greenlandic culture, and witness climate change effects. Activities include glacier trekking, dog sledding, and northern lights chasing.</p>
+                    <a href="https://www.greenland.com" target="_blank">Greenland Tourism</a> |
+                    <a href="https://www.polarcruises.com" target="_blank">Polar Cruises</a>
+                </div>
+                <div class="adventure-item">
+                    <h4>Svalbard, Norway</h4>
+                    <p>Explore the world's northernmost permanently inhabited settlement with polar bears, walruses, and reindeer. Hike through Arctic wilderness, experience the midnight sun, and learn about coal mining history. Activities include snowmobile safaris and wildlife photography expeditions.</p>
+                    <a href="https://www.svalbard.com" target="_blank">Svalbard Tourism</a> |
+                    <a href="https://www.sysselmannen.no" target="_blank">Sysselmannen (Governor)</a>
+                </div>
+
+                <h3>🎯 Adventure Types</h3>
+                <div class="adventure-types">
+                    <div class="adventure-type">
+                        <h4>🏔️ Mountain Adventures</h4>
+                        <p>Hiking, climbing, and mountaineering expeditions</p>
+                    </div>
+                    <div class="adventure-type">
+                        <h4>🌊 Water Adventures</h4>
+                        <p>Diving, surfing, rafting, and ocean exploration</p>
+                    </div>
+                    <div class="adventure-type">
+                        <h4>🏜️ Desert Adventures</h4>
+                        <p>Sand dune treks, camel safaris, and desert culture</p>
+                    </div>
+                    <div class="adventure-type">
+                        <h4>🌲 Jungle Adventures</h4>
+                        <p>Rainforest treks, wildlife encounters, and indigenous cultures</p>
+                    </div>
+                    <div class="adventure-type">
+                        <h4>❄️ Polar Adventures</h4>
+                        <p>Ice expeditions, aurora chasing, and extreme cold experiences</p>
+                    </div>
+                    <div class="adventure-type">
+                        <h4>🏛️ Cultural Adventures</h4>
+                        <p>Ancient ruins, traditional ceremonies, and historical explorations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section location-city" id="location">
+            <h2 data-i18n="locations-title">Location City</h2>
+            <p>Mahama Community Center is located in the heart of the city, serving learners from local neighborhoods and beyond. Explore our key locations across Kigali, Rwanda.</p>
+            <div class="city-grid">
+                <article class="city-card">
+                    <div class="city-image">
+                        <img src="./image/central.jpeg" alt="Kigali Central">
+                    </div>
+                    <h3>Kigali Central</h3>
+                    <p>Our flagship location in the bustling heart of Kigali serves as the main hub for educational programs, community events, and international collaborations. Located near major transportation routes, it provides easy access for students and professionals from across the city.</p>
+                    <div class="city-details">
+                        <p><strong>Address:</strong> KN 123 St, Kigali Central Business District</p>
+                        <p><strong>Programs:</strong> Digital literacy, business training, language courses</p>
+                        <p><strong>Facilities:</strong> Computer labs, meeting rooms, library</p>
+                        <p><strong>Hours:</strong> Mon-Fri 8AM-8PM, Sat 9AM-5PM</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Kigali+Central+Business+District" target="_blank">View on Map</a> |
+                    <a href="https://www.visit-rwanda.com" target="_blank">Kigali Tourism</a>
+                </article>
+                <article class="city-card">
+                    <div class="city-image">
+                        <img src="./image/nyamirambo.jpeg" alt="Nyamirambo">
+                    </div>
+                    <h3>Nyamirambo</h3>
+                    <p>A vibrant neighborhood center focused on youth development and family support programs. Our Nyamirambo location specializes in community outreach, cultural preservation, and local entrepreneurship initiatives that empower residents and strengthen neighborhood bonds.</p>
+                    <div class="city-details">
+                        <p><strong>Address:</strong> KN 456 St, Nyamirambo District</p>
+                        <p><strong>Programs:</strong> Youth mentorship, family counseling, cultural workshops</p>
+                        <p><strong>Facilities:</strong> Community hall, art studio, playground</p>
+                        <p><strong>Hours:</strong> Mon-Sat 9AM-6PM, Sun 10AM-4PM</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Nyamirambo+Kigali" target="_blank">View on Map</a> |
+                    <a href="https://www.nyamirambo.rw" target="_blank">Nyamirambo Info</a>
+                </article>
+                <article class="city-card">
+                    <div class="city-image">
+                        <img src="./image/gisozi.jpeg" alt="Gisozi">
+                    </div>
+                    <h3>Gisozi</h3>
+                    <p>Located near the Kigali Genocide Memorial, our Gisozi center provides healing, education, and reconciliation programs. We offer counseling services, peace-building workshops, and educational support for survivors and their families, fostering hope and community resilience.</p>
+                    <div class="city-details">
+                        <p><strong>Address:</strong> KG 789 St, Gisozi Memorial Area</p>
+                        <p><strong>Programs:</strong> Trauma counseling, peace education, memorial tours</p>
+                        <p><strong>Facilities:</strong> Counseling rooms, memorial garden, quiet spaces</p>
+                        <p><strong>Hours:</strong> Tue-Sun 9AM-5PM (Mon closed for reflection)</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Kigali+Genocide+Memorial" target="_blank">View on Map</a> |
+                    <a href="https://www.kgm.rw" target="_blank">Genocide Memorial</a>
+                </article>
+            </div>
+
+            <div class="location-info">
+                <h3>Transportation & Accessibility</h3>
+                <div class="transport-grid">
+                    <div class="transport-item">
+                        <h4>🚗 By Car</h4>
+                        <p>All locations have parking facilities and are accessible via major roads. GPS coordinates available for navigation apps.</p>
+                    </div>
+                    <div class="transport-item">
+                        <h4>🚌 Public Transport</h4>
+                        <p>Well-connected by Kigali bus services and moto-taxis. Walking distance from major bus stops in each district.</p>
+                    </div>
+                    <div class="transport-item">
+                        <h4>♿ Accessibility</h4>
+                        <p>All facilities are wheelchair accessible with ramps, elevators, and accessible restrooms. Sign language interpreters available upon request.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section animation">
+            <h2 data-i18n="wildlife-title">Animated Wildlife</h2>
+            <p>Experience the world's wildlife through our animated showcase of global animals and their habitats.</p>
+            <div class="animation-box">
+                <div class="pulse-circle"></div>
+                <div class="pulse-circle pulse-2"></div>
+                <div class="animation-text">Learning in motion</div>
+
+                <!-- Animated Animals -->
+                <div class="animal bird">
+                    <div class="bird-body"></div>
+                    <div class="bird-wing left"></div>
+                    <div class="bird-wing right"></div>
+                    <div class="bird-tail"></div>
+                </div>
+
+                <div class="animal fish">
+                    <div class="fish-body"></div>
+                    <div class="fish-tail"></div>
+                    <div class="fish-fin top"></div>
+                    <div class="fish-fin bottom"></div>
+                </div>
+
+                <div class="animal butterfly">
+                    <div class="butterfly-body"></div>
+                    <div class="butterfly-wing top-left"></div>
+                    <div class="butterfly-wing top-right"></div>
+                    <div class="butterfly-wing bottom-left"></div>
+                    <div class="butterfly-wing bottom-right"></div>
+                </div>
+
+                <div class="animal deer">
+                    <div class="deer-body"></div>
+                    <div class="deer-head"></div>
+                    <div class="deer-antler left"></div>
+                    <div class="deer-antler right"></div>
+                    <div class="deer-leg front-left"></div>
+                    <div class="deer-leg front-right"></div>
+                    <div class="deer-leg back-left"></div>
+                    <div class="deer-leg back-right"></div>
+                </div>
+
+                <div class="animal penguin">
+                    <div class="penguin-body"></div>
+                    <div class="penguin-head"></div>
+                    <div class="penguin-wing left"></div>
+                    <div class="penguin-wing right"></div>
+                    <div class="penguin-foot left"></div>
+                    <div class="penguin-foot right"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section partner-form" id="partner-form">
+            <h2 data-i18n="partner-title">Become a Partner</h2>
+            <p>Partner with MCC to support community development, training programs, and shared growth initiatives.</p>
+            <form id="partner-form">
+                <div class="form-grid">
+                    <label>
+                        Name
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="Your email" required>
+                    </label>
+                    <label>
+                        Organization
+                        <input type="text" name="organization" placeholder="Your organization">
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" rows="4" placeholder="How would you like to partner?" required></textarea>
+                    </label>
+                </div>
+                <button type="submit">Submit Partnership Request</button>
+            </form>
+        </section>
+
+        <section class="section universities">
+            <h2 data-i18n="universities-title">University Links</h2>
+            <p>Explore our university partners, global education leaders, and world learning resources.</p>
+            <ul>
+                <li><a href="https://www.ur.ac.rw" target="_blank">University of Rwanda</a></li>
+                <li><a href="https://www.isae.ac.rw" target="_blank">ISAE-ENS</a></li>
+                <li><a href="https://www.kigalicity.gov.rw" target="_blank">Kigali Institute of Education</a></li>
+                <li><a href="https://www.muhas.ac.rw" target="_blank">Muhabura Integrated Polytechnic</a></li>
+                <li><a href="https://www.kigalicity.gov.rw" target="_blank">Kigali Polytechnic</a></li>
+                <li><a href="https://www.umas.ac.rw" target="_blank">University of Arts, Sciences and Technology</a></li>
+                <li><a href="https://www.harvard.edu" target="_blank">Harvard University</a></li>
+                <li><a href="https://www.stanford.edu" target="_blank">Stanford University</a></li>
+                <li><a href="https://www.ox.ac.uk" target="_blank">University of Oxford</a></li>
+                <li><a href="https://www.cam.ac.uk" target="_blank">University of Cambridge</a></li>
+                <li><a href="https://www.mit.edu" target="_blank">Massachusetts Institute of Technology</a></li>
+                <li><a href="https://www.nus.edu.sg" target="_blank">National University of Singapore</a></li>
+                <li><a href="https://www.tsinghua.edu.cn" target="_blank">Tsinghua University</a></li>
+                <li><a href="https://www.anu.edu.au" target="_blank">Australian National University</a></li>
+                <li><a href="https://www.ethz.ch" target="_blank">ETH Zurich</a></li>
+                <li><a href="https://www.u-tokyo.ac.jp" target="_blank">University of Tokyo</a></li>
+                <li><a href="https://www.unesco.org" target="_blank">UNESCO</a></li>
+                <li><a href="https://www.worldbank.org/en/topic/education" target="_blank">World Bank Education</a></li>
+                <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+                <li><a href="https://www.edx.org" target="_blank">edX</a></li>
+                <li><a href="https://www.open.edu" target="_blank">The Open University</a></li>
+                <li><a href="https://www.globalgoals.org" target="_blank">UN Sustainable Development Goals</a></li>
+            </ul>
+        </section>
     </main>
+
+    <footer class="footer-top">
+        <div class="footer-block">
+            <h3 data-i18n="footer-contact">Contact Us</h3>
+            <p>Phone: +250 785 786 547</p>
+            <p>Email: bapfekureraevariste@gmail.com</p>
+            <p>Address: Kigali, Rwanda</p>
+        </div>
+        <div class="footer-block">
+            <h3 data-i18n="footer-services">Quick Links</h3>
+            <a href="./index.html">Home</a>
+            <a href="./community.html">Community</a>
+            <a href="./sign.html">Signup</a>
+            <a href="./login.html">Login</a>
+        </div>
+        <div class="footer-block">
+            <h3 data-i18n="footer-about">Programs</h3>
+            <a href="#roaming">Roaming</a>
+            <a href="#edventure">Global Adventures</a>
+            <a href="#location">Location City</a>
+            <a href="#partner-form">Partner</a>
+        </div>
+    </footer>
+    <footer class="footer-bottom">
+        <p data-i18n="footer-copyright">&copy; 2026 Mahama Community Center. All rights reserved.</p>
+        <p>Designed for community learning, exploration, and partner growth.</p>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <div class="chatbot-header">
+            <h3>💬 Chat Support</h3>
+            <button id="chatbot-close" class="chatbot-close">✕</button>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages"></div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type your message..." />
+            <button id="chatbot-send" class="chatbot-send">Send</button>
+        </div>
+    </div>
+    
+    <button id="chatbot-toggle" class="chatbot-toggle" title="Chat with us">💬</button>
+
+    <script>
+        const searchInput = document.getElementById('search');
+        const searchButton = document.getElementById('button');
+        const cards = document.querySelectorAll('.team-cards .card');
+
+        function filterTeamCards() {
+            const query = searchInput.value.trim().toLowerCase();
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query) ? 'flex' : 'none';
+            });
+        }
+
+        searchButton.addEventListener('click', filterTeamCards);
+        searchInput.addEventListener('keydown', event => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                filterTeamCards();
+            }
+        });
+
+        const roamingForm = document.getElementById('roaming-request-form');
+        roamingForm.addEventListener('submit', event => {
+            event.preventDefault();
+            alert('Roaming request sent! Our team will contact you soon.');
+            roamingForm.reset();
+        });
+
+        const partnerForm = document.getElementById('partner-form');
+        partnerForm.addEventListener('submit', event => {
+            event.preventDefault();
+            alert('Partnership request submitted! We will review your application and get back to you.');
+            partnerForm.reset();
+        });
+
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        setTheme(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // Language Selector Functionality
+        const languageSelect = document.getElementById('language-select');
+        const currentLanguage = localStorage.getItem('language') || 'en';
+
+        // Translation data
+        const translations = {
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-services': 'Services',
+                'nav-contact': 'Contact',
+                'search-placeholder': 'Search team members...',
+                'search-btn': 'Search',
+                'header-title': 'Mahama Community Center',
+                'header-subtitle': 'Building Strong Communities Together',
+                'team-title': 'Our Team',
+                'team-desc': 'Meet our dedicated team members who work tirelessly to serve our community.',
+                'roaming-title': 'Roaming Services',
+                'roaming-desc': 'Connect with our roaming services for mobile connectivity worldwide.',
+                'adventures-title': 'Global Adventures',
+                'adventures-desc': 'Explore amazing destinations and create unforgettable memories.',
+                'wildlife-title': 'Wildlife Conservation',
+                'wildlife-desc': 'Join us in protecting and preserving wildlife habitats.',
+                'locations-title': 'City Locations',
+                'locations-desc': 'Find our centers in major cities around the world.',
+                'partner-title': 'Become a Partner',
+                'partner-desc': 'Join our network of partners and grow together.',
+                'universities-title': 'Partner Universities',
+                'universities-desc': 'Collaborating with leading educational institutions.',
+                'footer-about': 'About Us',
+                'footer-services': 'Services',
+                'footer-contact': 'Contact',
+                'footer-copyright': '© 2024 Mahama Community Center. All rights reserved.'
+            },
+            fr: {
+                'nav-home': 'Accueil',
+                'nav-about': 'À propos',
+                'nav-services': 'Services',
+                'nav-contact': 'Contact',
+                'search-placeholder': 'Rechercher des membres d\'équipe...',
+                'search-btn': 'Rechercher',
+                'header-title': 'Centre Communautaire Mahama',
+                'header-subtitle': 'Construire des communautés fortes ensemble',
+                'team-title': 'Notre Équipe',
+                'team-desc': 'Rencontrez nos membres d\'équipe dédiés qui travaillent sans relâche pour servir notre communauté.',
+                'roaming-title': 'Services d\'Itinérance',
+                'roaming-desc': 'Connectez-vous avec nos services d\'itinérance pour une connectivité mobile mondiale.',
+                'adventures-title': 'Aventures Mondiales',
+                'adventures-desc': 'Explorez des destinations incroyables et créez des souvenirs inoubliables.',
+                'wildlife-title': 'Conservation de la Faune',
+                'wildlife-desc': 'Rejoignez-nous pour protéger et préserver les habitats de la faune.',
+                'locations-title': 'Emplacements Urbains',
+                'locations-desc': 'Trouvez nos centres dans les grandes villes du monde.',
+                'partner-title': 'Devenir Partenaire',
+                'partner-desc': 'Rejoignez notre réseau de partenaires et grandissez ensemble.',
+                'universities-title': 'Universités Partenaires',
+                'universities-desc': 'Collaboration avec des institutions éducatives de premier plan.',
+                'footer-about': 'À propos de nous',
+                'footer-services': 'Services',
+                'footer-contact': 'Contact',
+                'footer-copyright': '© 2024 Centre Communautaire Mahama. Tous droits réservés.'
+            },
+            es: {
+                'nav-home': 'Inicio',
+                'nav-about': 'Acerca de',
+                'nav-services': 'Servicios',
+                'nav-contact': 'Contacto',
+                'search-placeholder': 'Buscar miembros del equipo...',
+                'search-btn': 'Buscar',
+                'header-title': 'Centro Comunitario Mahama',
+                'header-subtitle': 'Construyendo comunidades fuertes juntos',
+                'team-title': 'Nuestro Equipo',
+                'team-desc': 'Conoce a nuestros miembros del equipo dedicados que trabajan incansablemente para servir a nuestra comunidad.',
+                'roaming-title': 'Servicios de Roaming',
+                'roaming-desc': 'Conéctate con nuestros servicios de roaming para conectividad móvil mundial.',
+                'adventures-title': 'Aventuras Globales',
+                'adventures-desc': 'Explora destinos increíbles y crea recuerdos inolvidables.',
+                'wildlife-title': 'Conservación de la Vida Silvestre',
+                'wildlife-desc': 'Únete a nosotros para proteger y preservar los hábitats de la vida silvestre.',
+                'locations-title': 'Ubicaciones Urbanas',
+                'locations-desc': 'Encuentra nuestros centros en las principales ciudades del mundo.',
+                'partner-title': 'Conviértete en Socio',
+                'partner-desc': 'Únete a nuestra red de socios y crece juntos.',
+                'universities-title': 'Universidades Socias',
+                'universities-desc': 'Colaborando con instituciones educativas líderes.',
+                'footer-about': 'Acerca de nosotros',
+                'footer-services': 'Servicios',
+                'footer-contact': 'Contacto',
+                'footer-copyright': '© 2024 Centro Comunitario Mahama. Todos los derechos reservados.'
+            },
+            rw: {
+                'nav-home': 'Ahabanza',
+                'nav-about': 'Ibyerekeye',
+                'nav-services': 'Serivisi',
+                'nav-contact': 'Twandikire',
+                'search-placeholder': 'Shakisha abakozi...',
+                'search-btn': 'Shakisha',
+                'header-title': 'Ikigo Nyarwanda Mahama',
+                'header-subtitle': 'Tubaka imiryango y\'umutekano hamwe',
+                'team-title': 'Itsinda Ryacu',
+                'team-desc': 'Menya abakozi bacu bafite umuhate wo gufasha umuryango wacu.',
+                'roaming-title': 'Serivisi zo Gutemberera',
+                'roaming-desc': 'Huzuza serivisi zacu zo gutemberera ku isi yose.',
+                'adventures-title': 'Urugendo Mpuzamahanga',
+                'adventures-desc': 'Genda mu bice by\'isi bitangaje kandi ubone ibyibukwa.',
+                'wildlife-title': 'Kurengera Ibinyabuzima',
+                'wildlife-desc': 'Tujyane kurengera no kubungabunga ibyanya by\'ibinyabuzima.',
+                'locations-title': 'Imijyi Iherereyemo',
+                'locations-desc': 'Shaka ibigo byacu mu mijyi minini y\'isi.',
+                'partner-title': 'Ba Umufatanyabikorwa',
+                'partner-desc': 'Injira mu itsinda ryacu kandi dukure hamwe.',
+                'universities-title': 'Kaminuza Zifatanyije',
+                'universities-desc': 'Dufatanya n\'amashuri makuru y\'icyitegererezo.',
+                'footer-about': 'Ibyerekeye twe',
+                'footer-services': 'Serivisi',
+                'footer-contact': 'Twandikire',
+                'footer-copyright': '© 2024 Ikigo Nyarwanda Mahama. Uburenganzira bwose burafatwa.'
+            }
+        };
+
+        function setLanguage(language) {
+            localStorage.setItem('language', language);
+            languageSelect.value = language;
+
+            // Update all elements with data-i18n attributes
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[language] && translations[language][key]) {
+                    element.placeholder = translations[language][key];
+                }
+            });
+        }
+
+        setLanguage(currentLanguage);
+
+        languageSelect.addEventListener('change', (event) => {
+            setLanguage(event.target.value);
+        });
+
+        // Mobile Navigation Functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        function toggleMobileNav() {
+            hamburgerMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        hamburgerMenu.addEventListener('click', toggleMobileNav);
+
+        // Close mobile nav when clicking outside or on a link
+        document.addEventListener('click', (event) => {
+            if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close mobile nav when a link is clicked
+        navLinks.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Chatbot Functionality
+        const chatbotWidget = document.getElementById('chatbot-widget');
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+
+        // Chatbot responses database
+        const chatbotResponses = {
+            en: {
+                greeting: "Hello! 👋 Welcome to Mahama Community Center. How can I help you today?",
+                team: "Our team consists of dedicated professionals passionate about community development and global outreach. We work tirelessly to serve communities across the world. Can you tell me what specific aspect of our team interests you?",
+                services: "We offer four main service categories:\n1️⃣ Roaming Services - Mobile connectivity worldwide\n2️⃣ Global Adventures - Explore amazing destinations\n3️⃣ Wildlife Conservation - Protect natural habitats\n4️⃣ Partnerships - Join our growing network\n\nWhich service would you like to learn more about?",
+                roaming: "🌍 Roaming Services:\nOur roaming services provide seamless mobile connectivity for travelers and businesses worldwide. We offer competitive rates and reliable coverage in over 150 countries. For detailed pricing and coverage information, contact us at +250 785 786 547 or email bapfekureraevariste@gmail.com",
+                location: "📍 Our Locations:\nWe have community centers in major cities worldwide including:\n• Kigali, Rwanda (Headquarters)\n• Major cities across Africa, Europe, Asia, and the Americas\n\nEach center offers local services and global connectivity. Which region interests you?",
+                partner: "🤝 Partnership Program:\nWe're always looking for passionate partners! Our partnership program includes:\n✓ Revenue sharing opportunities\n✓ Marketing support\n✓ Training and resources\n✓ Global network access\n\nTo apply, fill out our partnership form on this page, and our team will review your application within 5 business days!",
+                university: "🎓 University Collaborations:\nWe partner with leading universities worldwide including:\n• Harvard University\n• University of Oxford\n• University of Tokyo\n• ETH Zurich\n• UNESCO initiatives\n• Coursera & edX platforms\n\nOur collaborations focus on education, research, and community development. Are you interested in a specific university or educational program?",
+                contact: "📞 Contact Information:\n\n📱 Phone: +250 785 786 547\n📧 Email: bapfekureraevariste@gmail.com\n📍 Address: Kigali, Rwanda\n🌐 Website: Available on our homepage\n\nWe typically respond within 24 hours. How else can we assist you?",
+                adventure: "🌴 Global Adventures:\nOur adventure programs include:\n🏔️ Mountain trekking and exploration\n🏖️ Beach and coastal experiences\n🌳 Jungle and rainforest tours\n🏜️ Desert expeditions\n🏛️ Cultural and historical tours\n\nEach adventure is carefully planned with expert guides and safety measures. What type of adventure interests you?",
+                wildlife: "🦁 Wildlife Conservation:\nWe're committed to protecting endangered species and natural habitats through:\n🌿 Habitat restoration projects\n🔬 Research and education\n🤝 Community involvement\n💰 Funding conservation initiatives\n\nYou can participate by volunteering, donating, or joining our programs!",
+                hours: "⏰ Operating Hours:\nMonday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed\nPublic Holidays: Closed\n\nFor urgent matters, contact us via email or phone.",
+                price: "💰 Pricing:\nOur pricing varies by service. Please contact us with your specific needs:\n📞 +250 785 786 547\n📧 bapfekureraevariste@gmail.com\n\nWe offer competitive rates and customized packages!",
+                default: "I'm here to help! 🤖 You can ask me about:\n• Our team and mission\n• Services we offer\n• Global adventures\n• Wildlife conservation\n• Partnership opportunities\n• University collaborations\n• Location information\n• Contact details\n• Operating hours\n• Pricing\n\nWhat would you like to know?"
+            },
+            fr: {
+                greeting: "Bonjour! 👋 Bienvenue au Centre Communautaire Mahama. Comment puis-je vous aider?",
+                team: "Notre équipe est composée de professionnels dédiés passionnés par le développement communautaire. Comment puis-je vous aider davantage?",
+                services: "Nous offrons quatre services principaux:\n1️⃣ Services d'itinérance\n2️⃣ Aventures mondiales\n3️⃣ Conservation de la faune\n4️⃣ Partenariats\n\nLequel vous intéresse?",
+                roaming: "Nos services d'itinérance offrent une connectivité mobile mondiale fiable. Contactez-nous au +250 785 786 547 pour plus de détails.",
+                location: "Nous avons des centres dans les grandes villes du monde. Kigali, Rwanda est notre siège. Quelle région vous intéresse?",
+                partner: "Voulez-vous devenir partenaire? Remplissez notre formulaire de partenariat et nous vous répondrons dans 5 jours!",
+                university: "Nous collaborons avec les universités leaders du monde entier comme Harvard, Oxford, et l'Université de Tokyo.",
+                contact: "Vous pouvez nous contacter à:\n📞 +250 785 786 547\n📧 bapfekureraevariste@gmail.com\n📍 Kigali, Rwanda",
+                adventure: "Nos programmes d'aventure incluent la randonnée en montagne, les plages, la jungle et les expéditions désertiques.",
+                wildlife: "Nous protégeons les espèces menacées par la restauration d'habitats et des initiatives de conservation.",
+                hours: "Lundi - Vendredi: 9:00 - 18:00\nSamedi: 10:00 - 16:00\nDimanche: Fermé",
+                price: "Notre tarification varie selon le service. Contactez-nous pour des devis personnalisés!",
+                default: "Je suis là pour vous aider! Vous pouvez me poser des questions sur notre équipe, services, aventures, conservation, partenariats, universités, localisation, contacts, ou tarifs."
+            },
+            rw: {
+                greeting: "Muraho! 👋 Murakari gakondo mu Ikigo Nyarwanda Mahama. Ndagakwigire?",
+                team: "Itsinda ryacu rigarutse n'abakozi bafite icishya ku mahoro n'ubwenge.",
+                services: "Duhatira serivisi zinc:\n1️⃣ Serivisi zo gutemberera\n2️⃣ Urugendo\n3️⃣ Kurengera ibinyabuzima\n4️⃣ Ubufatanye\n\nIyihe ijyagushaka?",
+                roaming: "Serivisi zacu zihatira mugukorera mu mahanga. Dukwandika +250 785 786 547.",
+                location: "Dufite ibigo mu mijyi minini y'isi. Kigali ni headquarters.",
+                partner: "Muri ubufatanye? Jyuzuze fomu kandi tugisubira mu minsi 5!",
+                university: "Dufatanya n'amashuri makuru y'icyitegererezo.",
+                contact: "📞 +250 785 786 547\n📧 bapfekureraevariste@gmail.com\n📍 Kigali, Rwanda",
+                adventure: "Urugendo rwakwa rujyanye n'imodoka, inzira, n'ibindi bijyanye n'ubwenge.",
+                wildlife: "Turengerera ibinyabuzima kandi tubarizega habituza.",
+                hours: "Kuwa mbere - kuwa gatanu: 9:00 - 18:00\nKuwa gatandatu: 10:00 - 16:00\nKuwa cyuma: Igihe cyose",
+                price: "Ibikoresho bifite ibiciro bitandukanye. Kontakta kandi ugire inshinga!",
+                default: "Nari kwigira! Mundike ibiciro k'itsinda, serivisi, urugendo, kurengera, ubufatanye, kaminuza, no mujyi nirabandi."
+            },
+            es: {
+                greeting: "¡Hola! 👋 Bienvenido al Centro Comunitario Mahama. ¿Cómo puedo ayudarte?",
+                team: "Nuestro equipo está compuesto por profesionales dedicados apasionados por el desarrollo comunitario. ¿Qué aspecto te interesa?",
+                services: "Ofrecemos cuatro servicios principales:\n1️⃣ Servicios de roaming\n2️⃣ Aventuras globales\n3️⃣ Conservación de vida silvestre\n4️⃣ Asociaciones\n\n¿Cuál te interesa?",
+                roaming: "Nuestros servicios de roaming proporcionan conectividad móvil mundial confiable. Contáctanos al +250 785 786 547.",
+                location: "Tenemos centros en las principales ciudades del mundo. Kigali, Ruanda es nuestra sede. ¿Qué región te interesa?",
+                partner: "¿Quieres ser socio? ¡Rellena nuestro formulario y nos pondremos en contacto en 5 días!",
+                university: "Colaboramos con universidades líderes como Harvard, Oxford y la Universidad de Tokio.",
+                contact: "📞 +250 785 786 547\n📧 bapfekureraevariste@gmail.com\n📍 Kigali, Ruanda",
+                adventure: "Nuestros programas incluyen senderismo, playas, jungla y expediciones desérticas.",
+                wildlife: "Protegemos especies amenazadas restaurando hábitats e iniciativas de conservación.",
+                hours: "Lunes - Viernes: 9:00 - 18:00\nSábado: 10:00 - 16:00\nDomingo: Cerrado",
+                price: "Nuestros precios varían según el servicio. ¡Contáctanos para presupuestos personalizados!",
+                default: "¡Estoy aquí para ayudarte! Puedes preguntarme sobre equipo, servicios, aventuras, conservación, asociaciones, universidades, ubicación, contacto, o precios."
+            }
+        };
+
+        function getBotResponse(userMessage) {
+            const currentLang = localStorage.getItem('language') || 'en';
+            const responses = chatbotResponses[currentLang] || chatbotResponses.en;
+            const message = userMessage.toLowerCase().trim();
+
+            // Greeting patterns
+            if (/^(hello|hi|hey|greetings|bonjour|salut|buenos dias|hola|muraho|amakuru)/.test(message)) {
+                return responses.greeting;
+            }
+
+            // Team patterns
+            if (/(who are you|tell me about|your team|équipe|itsinda|who is|about your team|about your organization)/.test(message)) {
+                return responses.team;
+            }
+
+            // Services patterns
+            if (/(what services|what do you offer|offer|services|serivisi|propose)/.test(message)) {
+                return responses.services;
+            }
+
+            // Roaming patterns
+            if (/(roaming|mobile|connectivity|phone|call|internet|data|network|connection|communication)/.test(message)) {
+                return responses.roaming;
+            }
+
+            // Location patterns
+            if (/(where|location|city|centre|office|address|mujyi|où|dónde|where are you)/.test(message)) {
+                return responses.location;
+            }
+
+            // Partnership patterns
+            if (/(partner|partnership|collaborate|join|become partner|partenaire|ubufatanye|work with|association|socio)/.test(message)) {
+                return responses.partner;
+            }
+
+            // University patterns
+            if (/(university|université|education|academic|kaminuza|college|school|learning)/.test(message)) {
+                return responses.university;
+            }
+
+            // Contact patterns
+            if (/(contact|phone|email|reach|address|telephone|get in touch|communication|twandikire|contacte|contáctame)/.test(message)) {
+                return responses.contact;
+            }
+
+            // Adventure patterns
+            if (/(adventure|trip|travel|explore|destination|tour|tourism|vacation|adventure|aventure|viaje)/.test(message)) {
+                return responses.adventure;
+            }
+
+            // Wildlife patterns
+            if (/(wildlife|nature|conservation|animal|protect|preserve|environment|fauna|animal|animal|environnement)/.test(message)) {
+                return responses.wildlife;
+            }
+
+            // Hours patterns
+            if (/(hours|open|timing|when|available|horaires|horario)/.test(message)) {
+                return responses.hours;
+            }
+
+            // Pricing patterns
+            if (/(price|cost|fee|charge|rate|payment|tariff|prix|costo|caro)/.test(message)) {
+                return responses.price;
+            }
+
+            // Default response
+            return responses.default;
+        }
+
+        function addMessage(message, isBot = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chatbot-message');
+            if (isBot) {
+                messageDiv.classList.add('bot-message');
+            } else {
+                messageDiv.classList.add('user-message');
+            }
+            messageDiv.textContent = message;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function sendMessage() {
+            const message = chatbotInput.value.trim();
+            if (message === '') return;
+
+            addMessage(message, false);
+            chatbotInput.value = '';
+
+            // Simulate bot response delay
+            setTimeout(() => {
+                const botResponse = getBotResponse(message);
+                addMessage(botResponse, true);
+            }, 500);
+        }
+
+        // Toggle chatbot visibility
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWidget.classList.toggle('active');
+            if (chatbotWidget.classList.contains('active') && chatbotMessages.children.length === 0) {
+                const currentLang = localStorage.getItem('language') || 'en';
+                addMessage(chatbotResponses[currentLang].greeting, true);
+            }
+        });
+
+        // Close chatbot
+        chatbotClose.addEventListener('click', () => {
+            chatbotWidget.classList.remove('active');
+        });
+
+        // Send message on button click
+        chatbotSend.addEventListener('click', sendMessage);
+
+        // Send message on Enter key
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme & Language Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Theme & Language System Test</h1>
+
+    <div class="test-section">
+        <h2>Theme Toggle Test</h2>
+        <button id="theme-toggle">🌙 Toggle Theme</button>
+        <p>Current theme: <span id="current-theme">light</span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Language Selector Test</h2>
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="rw">Kinyarwanda</option>
+        </select>
+        <p data-i18n="test-message">This is a test message that should change languages.</p>
+    </div>
+
+    <script>
+        // Test Theme Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentThemeDisplay = document.getElementById('current-theme');
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            currentThemeDisplay.textContent = theme;
+            themeToggle.textContent = theme === 'dark' ? '☀️ Toggle Theme' : '🌙 Toggle Theme';
+        }
+
+        setTheme(currentTheme);
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // Test Language Functionality
+        const languageSelect = document.getElementById('language-select');
+        const currentLanguage = localStorage.getItem('language') || 'en';
+
+        const translations = {
+            en: { 'test-message': 'This is a test message that should change languages.' },
+            fr: { 'test-message': 'Ceci est un message de test qui devrait changer de langue.' },
+            es: { 'test-message': 'Este es un mensaje de prueba que debería cambiar de idioma.' },
+            rw: { 'test-message': 'Iyi ni ubutumwa bwo kugerageza bugomba guhindura ururimi.' }
+        };
+
+        function setLanguage(language) {
+            localStorage.setItem('language', language);
+            languageSelect.value = language;
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+        }
+
+        setLanguage(currentLanguage);
+        languageSelect.addEventListener('change', (event) => {
+            setLanguage(event.target.value);
+        });
+    </script>
+</body>
+</html>
