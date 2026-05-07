@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+       body{
+        margin: 0%;
+        font-family: 'Times New Roman', Times, serif;
+       }
+       header{
+        margin: 0%;
+        display: flex;
+        gap: 2rem;
+        background: black;
+        color: white;
+        height: 55px;
+        align-items: center;
+       }
+       .Menu{
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+       }
+       .MYlogo{
+        font-size: 20px;
+        font-weight: bold;
+        background: skyblue;
+        border-radius: 20px;
+       }
+       div{
+        margin: 12px;
+        display: flex;
+        gap: 30px;
+        left: 80px;
+       }
+       div a{
+         text-decoration: none;
+         color: white;
+         font-size: 20px;
+         font-weight: bold;
+         cursor: pointer;
+        
+       }
+       .icon{
+        color: white;
+        margin: 0 16px;
+        cursor: pointer;
+        color: white;
+       }
+      .sidebar {
+    top: 0;
+    height: 100%;
+    width: 200px;
+    left: -500px;
+    background: gray;
+    transition: 0.3s;
+    position: fixed;
+    padding-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    padding:0 8px;
+    margin: 0%;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid;
+}
+
+.sidebar a:hover {
+    background: darkgray;
+}
+main{
+    padding: 20px;
+    background: darkgrey;
+    text-align: center;
+}
+.content{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1px bold;
+    box-shadow: 0 4px 33px rgb(33,66,8.3);
+    transition: 0.3s;
+}
+.content-1{
+    
+background: white;
+border-radius: 15px;
+overflow:hidden ;
+margin-bottom:12px bold ;
+box-shadow: 4px 35px 3px rgb(0,22,55);
+}
+footer{
+    background: darkgrey;
+    padding: 12px;
+
+}
+input{
+    width:20% ;
+    height: 35px;
+    border-color:yellow red black white ;
+}
+button{
+    height: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    border-color: yellow black white red;
+   background: green;
+}
+    </style>
+</head>
+<body>
+ <header>
+<div class="Menu"onclick="tomenu()">Menu</div>
+<div class="MYlogo">SB</div>
+<div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</div>
+<div class="icon">
+    <i class="fab fa-whatsapp"></i>Whatsapp
+    <i class="fab fa-facebook"></i>Facebook
+    <i class="fab fa-instagram"></i>Instegram
+</div>
+ </header> 
+ <div class="sidebar" id="sidebar">
+   <a href="#"><i class="fas fa-cog"></i> Setting</a>
+<a href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
+<a href="#"><i class="fas fa-lock"></i> Privacy</a>
+<a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+ </div>
+ <main>
+     <h1>Hello welcome to my website</h1>
+<div class="content">
+   
+    <p><h3>The US state department has cancelled tourist visas for more than half of the board members of Costa Rica’s leading national newspaper, La Nación, which has been a critical voice against the country’s president, Rodrigo Chaves, an ally of Donald Trump.
+
+During Chaves’s 2022 presidential campaign, La Nación published several articles documenting allegations of sexual harassment against him that had forced him out of his job at the World Bank. The paper also reported on allegations of illegal campaign financing, which Chaves denied.
+
+Since taking office, Chaves has been extremely critical of La Nación, accusing it of being “despicable press” and “political assassins”. He also targeted the newspaper financially by withdrawing a sanitation permit for an event space run by the organisation’s parent company. </h3></p>
+</div>
+<div class="content-1">
+    <p><h3>“This is completely unprecedented,” Pedro Abreu, the president of the board of La Nación, said via email. “We see it as an indirect attack on press freedom because of the effect it can have on an independent media outlet and on those who have the institutional responsibility to protect it.”
+
+Abreu said five of the paper’s seven board members had had their visas revoked, while the other two held passports from countries that do not require a visa to enter the US.</h3></p>
+</div>
+
+
+ </main>
+ <footer>
+<h3>Subscribe</h3>
+<input type="Email"placeholder="Enter Email"><button>Subscribe</button>
+<h4>if you want other information about this Website Please click in our social media</h4>
+<i class="fab fa-facebook"></i>
+<i class="fab fa-whatsapp"></i>
+
+
+ </footer>
+ <script>
+    function tomenu(){
+        let menu = document.getElementById("sidebar");
+        if( menu.style.left === "0px"){
+            menu.stlye.left = "-500px"
+        } else {
+            menu.style.left = "0px";
+        }
+    }
+ </script>
+</body>
+</html>

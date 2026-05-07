@@ -1,0 +1,400 @@
+ body{
+    margin: auto;
+    padding: auto;
+    font-family: Arial, sans-serif;
+ }
+ .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 40px;
+        }
+.header{
+    padding: 10px;
+    background:linear-gradient(145deg,#575656,rgb(254, 151, 254));
+    text-align: center;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 60px;
+    opacity: 0.3;
+    left: 45%;
+    border: 5px solid cyan;
+    background-color: white;
+    box-shadow: inset;
+}
+.logo h1{
+    overflow-wrap: break-word;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    background-color: #575656;
+    border-radius: 5px;
+    color: white;
+    opacity: 1;
+    text-align: center;
+}
+.log{
+    width: 18vw;
+    padding: 10px;
+    background-color: azure;
+    font-size: 20px;
+    position: relative;
+    justify-self: left;
+    border-radius: 5px;
+    box-shadow:white 0px 0px 10px;
+}
+.navbar{
+    padding: 10px 20px;
+    background-color: #575656;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.menu a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    text-transform: capitalize;
+}
+.menu a:hover{
+    cursor: pointer;
+    transition: all ease 0.3s;
+    padding: 10px 10px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.container{
+    padding: 10px;
+    background-color: transparent;
+}
+.card{
+    border-radius: 10px;
+    padding: 50px 20px;
+    background:linear-gradient(165deg,#655c2c,#31271b);
+}
+.prem{
+    justify-content: right;
+    position: relative;
+    align-items: center;
+}
+.prem h2{
+    color: black;
+    font-size: 1.5rem;
+    text-shadow: #f8b563 0 3px 0;
+    font-weight: 900;
+}
+.prem p{
+    font-size: 20px;
+    color: white;
+}
+.price{
+    margin-top: 20px;
+}
+.price span{
+    color: black;
+    font: bolder;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+    background: linear-gradient(305deg,gold,cyan,orange);
+    border: none;
+    border-radius: 5px;
+}
+.card button{
+    padding: 10px 10px;
+    background-color: dodgerblue;
+    color: white;
+    font: bold;
+    font-size: 20px;
+    border:none;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.card1{
+    padding: 20px 20px;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+.card1 img{
+    width: 42vw;
+    height: 40vh;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.card2{
+    align-items: baseline;
+    position: relative;
+}
+.old-price{
+    padding: 10px 10px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: darkcyan;
+}
+.current-price{
+     padding: 10px 10px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: darkcyan;
+}
+.update-badge{
+    padding: 10px 10px;
+    background-color:darkgray;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    position:relative;
+}
+.card3{
+    padding: 20px 20px;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+.course-title{
+     padding: 20px 20px;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+.card3 img{
+    width: 42vw;
+    height: 40vh;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.card5{
+    padding: 20px 20px;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.card5 img{
+    width: 42vw;
+    height: 40vh;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.footer{
+    padding: 20px;
+    background-color:#31271b;
+    color: white;
+}
+.card4{
+    align-items: baseline;
+    position: relative;
+}
+.card5{
+    align-items: baseline;
+    position: relative;
+}
+.form{
+    padding: 20px 20px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.form label{
+    font-size: 20px;
+    color: dodgerblue;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.form input{
+    width: 38vw;
+    height: 7vh;
+    border:1px solid darkorchid;
+    cursor: pointer;
+    color: black;
+}
+.form input::placeholder{
+    color: black;
+    text-transform: capitalize;
+    font: size 20px;;
+    font-style: italic;
+}
+.form input:hover{
+    transition: all ease 0.2s;
+    cursor: pointer;
+    border: 1px solid cyan;
+    box-shadow: 0px 0px 5px dodgerblue;
+    border-radius: 5px;
+}
+.form button{
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: lime;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.form button:hover{
+    transition: all ease 0.3s;
+    cursor: pointer;
+    background-color: limegreen;
+    color: black;
+}
+.form1{
+    padding: 20px 20px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.form1 input{
+    width: 38vw;
+    height: 7vh;
+    border:1px solid darkorchid;
+    cursor: pointer;
+    color: black;
+}
+.form1 label{
+    font-size: 20px;
+    color: dodgerblue;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.form1 input::placeholder{
+    color: black;
+    text-transform: capitalize;
+    font: size 20px;;
+    font-style: italic;
+}
+
+.form1 input:hover{
+    transition: all ease 0.2s;
+    cursor: pointer;
+    border: 1px solid cyan;
+    box-shadow: 0px 0px 5px dodgerblue;
+    border-radius: 5px;
+}
+
+.form1 button{
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: lime;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.form1 button:hover{
+    transition: all ease 0.3s;
+    cursor: pointer;
+    background-color: limegreen;
+    color: black;
+}
+.form3{
+    padding: 20px 20px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.form3 input{
+    width: 38vw;
+    height: 7vh;
+    border:1px solid darkorchid;
+    cursor: pointer;
+    color: black;
+}
+.form3 label{
+    font-size: 20px;
+    color: dodgerblue;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.form3 input::placeholder{
+    color: black;
+    text-transform: capitalize;
+    font: size 20px;;
+    font-style: italic;
+}
+
+.form3 input:hover{
+    transition: all ease 0.2s;
+    cursor: pointer;
+    border: 1px solid cyan;
+    box-shadow: 0px 0px 5px dodgerblue;
+    border-radius: 5px;
+}
+
+.form3 button{
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: lime;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.form3 button:hover{
+    transition: all ease 0.3s;
+    cursor: pointer;
+    background-color: limegreen;
+    color: black;
+}
+.payment-methods{
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.method-btn{
+    padding: 10px 10px;
+    background-color: white;
+    color: dodgerblue;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.method-btn:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    background-color: dodgerblue;
+    border: 1px solid black;
+    color: black;
+}

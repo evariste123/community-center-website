@@ -1,0 +1,213 @@
+body{
+    background-color: transparent;
+    margin: 0 auto;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px black;
+    justify-self: center;
+    margin-top: 50px;
+    position: relative;
+    width:500px;
+    border-radius: 30px;
+    transform: translate(50%);
+}
+.image{
+    position: relative;
+    justify-self: center;
+    transform: translate(40%);
+}
+.image img{
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    opacity: 1;
+    border-radius: 60px;
+    border: 5px solid darkgray;
+    box-shadow: 0px 0px 10px dodgerblue;
+}
+.image img:hover{
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    transform: translateY(-5px) scale(1.09);
+     box-shadow: 0px 0px 10px dodgerblue;
+
+}
+.card{
+    padding: 20px;
+    border-radius: 5px;
+    width: 450px;
+    text-align: center;
+    background: linear-gradient(133deg,#9ffa9e,#abbebb,#eddded);
+}
+.card h1{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-transform: capitalize;
+    text-shadow: 0 3px 0 rgb(27, 27, 26);
+}
+.card1 input{
+    width: 30vw;
+    height: 7vh;
+    border: 1px solid black;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card1 input::placeholder{
+    font-size: 20px;
+    color: black;
+    opacity: 0.5;
+    font-style: italic;
+}
+.card1 input:hover{
+    transition:all ease 0.2s;
+    border: 1px solid cyan;
+    box-shadow: 0px 0px 10px dodgerblue;
+}
+
+.card2 input{
+    width: 30vw;
+    height: 7vh;
+    border: 1px solid black;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card2 input::placeholder{
+    font-size: 20px;
+    color: black;
+    opacity: 0.5;
+    font-style: italic;
+}
+.card2 input:hover{
+    transition:all ease 0.2s;
+    border: 1px solid cyan;
+     box-shadow: 0px 0px 10px dodgerblue;
+
+}
+
+.card3 input{
+    width: 30vw;
+    height: 7vh;
+    border: 1px solid black;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card3 input::placeholder{
+    font-size: 20px;
+    color: black;
+    opacity: 0.5;
+    font-style: italic;
+}
+.card3 input:hover{
+    transition:all ease 0.2s;
+    border: 1px solid cyan;
+    box-shadow: 0px 0px 10px dodgerblue;
+
+}
+
+.card4 textarea{
+    width: 30vw;
+    height: 15vh;
+    border: 1px solid black;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card4 textarea::placeholder{
+    font-size: 20px;
+    color: black;
+    opacity: 0.5;
+    font-style: italic;
+}
+.card4 textarea:hover{
+    transition:all ease 0.2s;
+    border: 1px solid cyan;
+    box-shadow: 0px 0px 10px dodgerblue;
+}
+.btn{
+padding: 20px;
+background-color: darkgrey;
+margin-top: 10px;
+border-radius: 50px;
+}
+.btn button{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(190deg,#000,#65f4a8,white);
+}
+.btn button:hover{
+    transition: all ease-in 0.3s;
+    background: fixed;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 500;
+}
+@media(max-width:600px){
+    .contact{
+        position: relative;
+        width: 90vw;
+        height: auto;
+        transform: translate(30%);
+    }
+    .image{
+        transform: translate(30%);
+    }
+    .card{
+        width: 80vw;
+        height: auto;
+    }
+    .card1 input{
+        width: 70vw;
+        height: 7vh;
+    }
+    
+    .card2 input{
+        width: 70vw;
+        height: 7vh;
+    }
+    
+    .card3 input{
+        width: 70vw;
+        height: 7vh;
+    }
+    
+    .card4 textarea{
+        width: 70vw;
+        height: 15vh;
+    }
+}
+.back{
+    position: relative;
+    padding: 5px;
+}
+.back button{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+}
+.back button:hover{
+    transition: all ease-in 0.3s;
+    background-color:whitesmoke;
+    cursor: alias;
+}
