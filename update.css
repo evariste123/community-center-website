@@ -1,0 +1,356 @@
+
+        /* General Setup */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', 'Segoe UI', sans-serif; }
+        body {
+         background-color: #f8fafc;
+         color: #1e293b;
+          line-height: 1.6;
+           display: flex;
+            flex-direction: column;
+             min-height: 100vh;
+             }
+        .product-grid { 
+        display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 30px;
+         }
+        .input-row 
+        {
+         display: grid;
+         grid-template-columns: 1fr 1fr; gap: 15px;
+         }
+        footer 
+        { 
+        background: #0f172a;
+         color: #94a3b8;
+          padding: 80px 8% 40px;
+           border-top: 4px solid #10b981;
+         }
+        .footer-grid
+         { 
+        display: grid;
+         grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; 
+        }
+
+        @media (max-width: 768px) 
+        { nav { padding: 1rem 5%; flex-direction: column; gap: 15px; }
+         .nav-links { gap: 15px; }
+        .footer-grid { grid-template-columns: 1fr; }
+         .input-row { grid-template-columns: 1fr; } }
+
+         .navbar{
+            padding: 10px;
+            align-items: end;
+            justify-content: space-between;
+            position: relative;
+            display: flex;
+            background-color: #0f172a;
+         }
+         .logo{
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 900;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(132deg,#10b981,#1e293b);
+         }
+         .logo a{
+            text-decoration: none;
+            color: white;
+         }
+         .logo span{
+            color: #10b981;
+         }
+         .menu{
+            display: flex;
+            gap:20px;
+            flex-wrap: wrap;
+         }
+         .menu a{
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+            cursor: pointer;
+         }
+         .menu button{
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 800;
+            background: lightskyblue;
+         }
+         .menu button img{
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+            border-radius: 20px;
+            border: #0f172a 2px solid;
+            animation-duration: 2s;
+            animation-name: eva;
+            animation-delay: 0.9s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+         }
+         @keyframes eva{
+            from{
+                transform:rotate(0deg) scale(0.5);
+                opacity: 0.3;
+            }
+            to{
+                transform: rotate(360deg) scale(1);
+                opacity: 1;
+            }
+         }
+         .shop{
+            padding: 20px;
+         }
+         .header{
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(345deg,#94a3b8,#f8fafc);
+         }
+         .header h1{
+            color: #10b981;
+            font-size: 2rem;
+            text-shadow: #1e293b 0 3px 0;
+         }
+         .header p{
+            font-size: 20px;
+         }
+         .product-card{
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #0f172a;
+         }
+         .product-card img{
+            width: 25vw;
+            height: 30vh;
+            border-radius: 5px;
+         }
+         @media(max-width:600px){
+            .product-card img{
+               width: 80vw;
+               height: 30vh;
+            }
+         }
+         .price-tag{
+            padding: 10px;
+            color: rgb(127, 249, 127);
+            font-size: 20px;
+            border-radius: 5px 5px 0 0;
+            background-color: #1e293b;
+         }
+         .card-content{
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid wheat;
+         }
+         .card-content button{
+            padding: 10px 10px;
+            border: none;
+            background: linear-gradient(340deg,#0f172a,#1e293b,#94a3b8);
+            color: white;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+         .card-content button:hover{
+            transition: all ease-in 0.3s;
+            cursor:wait;
+            background: linear-gradient(306deg,#1e293b,#0f172a,#94a3b8);
+            transform: translate(-5px);
+            opacity: 1;
+         }
+         .card-category{
+            padding: 10px;
+            background-color: #94a3b8;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            color:#009;
+            font-weight: 900;
+         }
+         .card-title{
+            margin-top: 10px;
+            padding: 10px;
+            color: white;
+            background-color: #1e293b;
+         }
+         .card-modal{
+            padding: 20px;
+            background-color: whitesmoke;
+         }
+         .modal-content{
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+         }
+         .modal-content h2{
+            color: #1e293b;
+            margin-top: 20px;
+            font-size: 2rem;
+         }
+         .form{
+            background-image: url('./image/3.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 1;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px #0f172a;
+            padding: 10px;
+         }
+         .form-section-title{
+            font-size: 20px;
+            font: bold;
+            color: white;
+            font-weight: bold;
+         }
+         .input-group label{
+            font-size: 20px;
+            font-weight: 500;
+            color: #10b981;
+         }
+         .input-group input{
+            width: 30vw;
+            height: 8vh;
+            border: 1px solid #1a3939;
+            font-size: 17px;
+         }
+         .input-group input::placeholder{
+            color: black;
+            font-size: 17px;
+            text-transform: capitalize;
+            opacity: 0.7;
+         }
+         .input-group input:hover{
+            transition: all ease 0.3s;
+            cursor: pointer;
+            border: 1px solid #013972;
+            box-shadow: 0px 0px 10px dodgerblue;
+            transform: translate(-2px);
+         }
+         .payment-methods{
+            color: white;
+         }
+         .method-btn{
+            padding: 10px;
+            width: 15vw;
+            background-color: #013972;
+            border: 1px solid white;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.5;
+         }
+         .method-btn:hover{
+            transform: translate(-1px);
+            transition: all ease-in 0.3s;
+            background-color: #013568;
+            opacity: 0.4;
+            border: 1px solid black;
+         }
+         .input-group select{
+             width: 30vw;
+            height: 8vh;
+            border: 1px solid #1a3939;
+            font-size: 17px;
+         }
+         .input-group select::placeholder{
+             color: black;
+            font-size: 17px;
+            text-transform: capitalize;
+            opacity: 0.7;
+         }
+         .input-group select:hover{
+             transition: all ease 0.3s;
+            cursor: pointer;
+            border: 1px solid #013972;
+            box-shadow: 0px 0px 10px dodgerblue;
+            transform: translate(-2px);
+         }
+         .bonus-box{
+            padding: 10px;
+            background-color: #94a3b8;
+            opacity: 0.5;
+            color: black;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+         }
+         .total-line{
+            padding: 10px;
+            background-color: #bdfbe7;
+            opacity: 0.5;
+            text-align: center;
+            font-weight: 800;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+         }
+         .card{
+            position: relative;
+            justify-self: center;
+            margin-top: 10px;
+         }
+         .card button{
+            padding: 10px;
+            background-color: #10b981;
+            opacity: 0.8;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #009;
+         }
+         .card button:hover{
+            transition: all ease 0.3s;
+            cursor: pointer;
+            background-color: #10b981;
+            color: black;
+            border-radius: 0px;
+            opacity: 1;
+         }
+         .footer-col ul{
+            list-style: none;
+         }
+         .footer-col ul li a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+         }
+         .footer-col ul li a:hover{
+            transition: all ease 0.3s;
+            color: #10b981;
+            transform: translate(-2px);
+         }
+         .bottom{
+            margin-top: 20px;
+         }
+         .bottom p{
+            color: #a5a6a6;
+            margin-top: 30px;
+         }
+         .footer-about h4{
+            color: #009;
+            font-weight: 900;
+            font-size: 20px;
+         }
+         .footer-about span{
+            color: #10b981;
+         }

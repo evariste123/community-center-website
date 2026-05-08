@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCore</title>
+    <link rel="stylesheet" href="./update.css">
+</head>
+<body>
+
+    <!-- Professional Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="./team.html">TECH<span>CORE</span></a></div>
+        <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#shop">Store</a>
+                <a href="#delivery">Tracking</a>
+                <a href="#support">Support</a>
+                <a href="./team.html">prev</a>
+            </ul>
+            <button class="cart-status" onclick="toggleCart()">🛒 Cart (<span id="cart-count">✔️</span>) <img src="./image/576125964_858169786543713_2864301897074342238_n.jpg" alt=""> </button>
+        </div>
+    </nav>
+<div class="header">
+            <h1>Next-Gen Device Catalog</h1>
+            <p>Experience smart technology with secure worldwide delivery and loyalty bonuses.</p>
+        </div>
+    <main id="shop" class="shop">
+
+        <div class="product-grid">
+            <article class="product-card">
+                <div class="card-img-wrap">
+                    <span class="price-tag">$1,299.00</span>
+                    <img src="./image/tv.jpeg" alt="TV">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Entertainment</span>
+                    <h3 class="card-title">Quantum 8K Smart TV</h3>
+                    <p class="card-desc">65-inch Mini-LED display with Neural AI upscaling. Includes global shipping and bonus points.</p>
+                    <button class="btn-add" onclick="addToCart('Quantum 8K TV', 1299)">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-img-wrap">
+                    <span class="price-tag">$999.00</span>
+                    <br>
+                    <img src="./image/phone.jpeg" alt="Phone">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Mobile</span>
+                    <h3 class="card-title">Titan Pro Smartphone</h3>
+                    <p class="card-desc">108MP camera and X15 chip. Includes free premium protective case bonus.</p>
+                    <button class="btn-add" onclick="addToCart('Titan Pro Phone', 999)">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-img-wrap">
+                    <span class="price-tag">$349.00</span>
+                    <br>
+                    <img src="./image/whatch.jpeg" alt="Watch">
+                </div>
+                <div class="card-content">
+                    <span class="card-category">Wearables</span>
+                    <h3 class="card-title">Pulse Watch Series S</h3>
+                    <p class="card-desc">Health tracking with 48h battery. Earn 35 bonus points on purchase.</p>
+                    <button class="btn-add" onclick="addToCart('Pulse Watch', 349)">Add to Cart</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Payment, Delivery & Bonus Modal -->
+    <div id="cart-modal" class="card-modal">
+        <div class="modal-content">
+            <h2>Checkout & Payment</h2>
+            <div id="cart-items-list"></div>
+            <div class="form">
+            <form class="checkout-form" id="payment-form" action="">
+                <div class="form-section-title">1. Delivery Address</div>
+                <div class="input-group">
+                    <br>
+                    <label for="fullname">Fullname add:</label>
+                    <input type="text" placeholder="evariste eva" required>
+                </div>
+                <br>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Shipping City:</label>
+                        <input type="text" placeholder="New York" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Delivery Mode:</label>
+                        <select id="delivery-method" onchange="updateTotal()">
+                            <option value="0">Standard (Free - 7 Days)</option>
+                            <option value="30">Priority ($30.00 - 48 Hours)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section-title">2. Payment Method</div>
+                <div class="payment-methods">
+                    <div class="method-btn active" onclick="setPayment('card', this)">Credit Card</div>
+                    <br>
+                    <div class="method-btn" onclick="setPayment('paypal', this)">PayPal</div>
+                    <br>
+                    <div class="method-btn" onclick="setPayment('bank', this)">Bank Transfer</div>
+                </div>
+                <br>
+                <div id="card-details" class="form1">
+                    <div class="input-group">
+                        <label>Card Number:</label>
+                        <input type="text" placeholder="0000 0000 0000 0000">
+                    </div>
+                </div>
+                <br>
+                <div class="bonus-box">
+                    ⭐ Loyalty Reward: You will earn <span id="bonus-points">0</span> Points!
+                </div>
+                <br>
+                <div class="total-line">
+                    <span>Total Due:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+            </form>
+            </div>
+            <div class="card">
+                <button onclick="toggleCart()">Back</button>
+                <button onclick="processOrder()">Pay Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h4>TECH<span>CORE</span></h4>
+                <p>Delivering high-performance electronics and enterprise infrastructure solutions since 2015. We prioritize security, speed, and customer satisfaction.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Product Range</h5>
+                <ul>
+                    <li><a href="#">Smart Home</a></li>
+                    <li><a href="#">Mobile Phones</a></li>
+                    <li><a href="#">Wearable Tech</a></li>
+                    <li><a href="#">Audio Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Customer Care</h5>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Delivery Info</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms of Sale</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+     <p>       &copy; 2024 TechCore Global Inc. All rights reserved. Secure Payments Verified.</p>
+        </div>
+    </footer>
+</body>
+</html>
